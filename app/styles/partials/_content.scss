@@ -1,0 +1,21 @@
+body {
+	font-size: 62.5%;
+	padding-top: 60px;
+	padding-bottom: 0px;
+	font-size: 62.5%;
+	// background-color: $gray-darker;
+}
+
+img {
+	max-width:100;
+}
+
+.navbar-brand {
+  img {
+    top: 0;
+  }
+}
+
+.main {
+  background-color: $gray-lighter;
+}
