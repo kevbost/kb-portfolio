@@ -37,9 +37,10 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li class="scifi"><a href="#">PORTFOLIO</a></li>
-					<li class="orbit"><a href="#">ABOUT</a></li>
-					<li class="orbit"><a href="#">CONTACT</a></li>
+					<li class="portfolio"><a href="#">PORTFOLIO</a></li>
+					<li class="about"><a href="#about">ABOUT</a></li>
+					<li class="contact"><a href="#contact">CONTACT</a></li>
+					<li class="photography"><a href="#photography">PHOTOGRAPHY</a></li>
 				  </ul>
 
 				  <ul class="nav navbar-nav navbar-right">
@@ -50,20 +51,60 @@
 			</nav>
 <!-- /nav -->
 <!-- main -->
+
 	<div class="container main">
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+
 	</div>
+
+	<script type="text/template" class="portfolio-template">
+		<br>
+		<br>portfolio
+		<br>
+		<br>portfolio
+		<br>
+		<br>portfolio
+		<br>
+		<br>portfolio
+	</script>
+
+	<script type="text/template" class="about-template">
+		<br>
+		<br>about
+		<br>
+		<br>about
+		<br>
+		<br>about
+		<br>
+		<br>about
+	</script>
+
+	<script type="text/template" class="contact-template">
+		<br>
+		<br>contact
+		<br>
+		<br>contact
+		<br>
+		<br>contact
+		<br>
+		<br>contact
+	</script>
+
+	<script type="text/template" class="photography-template">
+		<br>
+		<br>photography
+		<br>
+		<br>photography
+		<br>
+		<br>photography
+		<br>
+		<br>photography
+	</script>
 
 	<!-- build:js(.) scripts/vendor.js -->
 	<!-- bower:js -->
 	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/backbone/backbone.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -93,6 +134,9 @@
 		<!-- endbuild -->
 
 		<!-- build:js({app,.tmp}) scripts/main.js -->
+		<script src="scripts/model-collections.js"></script>
+		<script src="scripts/app-view.js"></script>
+		<script src="scripts/router.js"></script>
 		<script src="scripts/main.js"></script>
 		<!-- endbuild -->
 </body>
