@@ -28,11 +28,6 @@ var AppRouter = Backbone.Router.extend({
 
 	photography: function() {
 		this.view = new PhotographyView();
-	},
-
-
-	destroy_view: function() {
-
 	}
 
 });

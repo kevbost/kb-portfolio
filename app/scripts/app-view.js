@@ -26,12 +26,7 @@ var PortfolioView = Backbone.View.extend({
 });
 
 var AboutView = Backbone.View.extend({
-// If you want an added class name
-// and to change DIV to LI or INPUT etc,
-
-// className: 'blah',
-// tagName: 'li',
-
+	
 	template: _.template($('.about-template').text()),
 
 	events: {
@@ -51,11 +46,6 @@ var AboutView = Backbone.View.extend({
 });
 
 var ContactView = Backbone.View.extend({
-// If you want an added class name
-// and to change DIV to LI or INPUT etc,
-
-// className: 'blah',
-// tagName: 'li',
 
 	template: _.template($('.contact-template').text()),
 
@@ -76,12 +66,7 @@ var ContactView = Backbone.View.extend({
 });
 
 var PhotographyView = Backbone.View.extend({
-// If you want an added class name
-// and to change DIV to LI or INPUT etc,
-
-// className: 'blah',
-// tagName: 'li',
-
+	
 	template: _.template($('.photography-template').text()),
 
 	events: {
