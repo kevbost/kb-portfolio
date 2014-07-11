@@ -3,4 +3,8 @@
 var appView;
 
 var app = new AppRouter();
-Backbone.history.start()
+Backbone.history.start();
+
+window.onload = function() {
+	paper.setup('myCanvas');
+};
