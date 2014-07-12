@@ -37,10 +37,10 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li class="portfolio"><a href="#">PORTFOLIO</a></li>
-					<li class="about"><a href="#about">ABOUT</a></li>
-					<li class="contact"><a href="#contact">CONTACT</a></li>
-					<li class="photography"><a href="#photography">PHOTOGRAPHY</a></li>
+					<li class="portfolio navlink"><a href="#">PORTFOLIO</a></li>
+					<li class="about navlink"><a href="#about">ABOUT</a></li>
+					<li class="contact navlink"><a href="#contact">CONTACT</a></li>
+					<li class="photography navlink"><a href="#photography">PHOTOGRAPHY</a></li>
 				  </ul>
 
 				  <ul class="nav navbar-nav navbar-right">
@@ -53,7 +53,6 @@
 <!-- main -->
 	<div class="container">
 		<div class="main">
-			iframe
 		</div>
 	</div>
 <!-- /main -->
@@ -66,17 +65,26 @@
 	<script type="text/template" class="portfolio-template">
 
 		<h1>Portfolio</h1>
+		
 		<div class="jumbotron">
 
-			<a href="http://kevbost.github.io/timeline-creation-tool" target="_blank">
-				<h2>Timeline Creation Tool</h2>
-			</a>
+			
+			<h2>Timeline Creation Tool</h2>
+			
 
-			<div class="portfolio-thumnail">
+			<div class="portfolio-thumnail timeline-thumbnail">
+				<div class="link-out">
+					<a href="http://kevbost.github.io/timeline-creation-tool" target="_blank">
+						<span class="label label-warning">Demo</span>
+					</a>
+					<a href="https://github.com/kevbost/timeline-creation-tool" target="_blank">
+						<span class="label label-warning">View On Github</span>
+					</a>
+				</div>
 			</div>
 			<div class="under-portfolio">
 				<p><b>Final Project for the Iron Yard</b></p>
-				<p>This tool was designed to create a timeline of events. This tool was designed to create a timeline of events.This tool was designed to create a timeline of events.This tool was designed to create a timeline of events.This tool was designed to create a timeline of events.This tool was designed to create a timeline of events.This tool was designed to create a timeline of events.This tool was designed to create a timeline of events.This tool was designed to create a timeline of events.</p>
+				<p>This tool was designed to create a timeline of events.</p>
 				<div class="assets">
 						<span class="label label-info">PaperJS</span>
 						<span class="label label-info">Bootstrap</span>
@@ -85,11 +93,40 @@
 						<span class="label label-info">JSON</span>
 				</div>
 			</div>
-		</div>
+		</div> <!-- timeline creation tool -->
+
+<!-- ////////////////////////////////////////////////////// -->
 
 		<div class="jumbotron">
-			<br>portfolio
-		</div>
+
+			
+			<h2>Image Gallery</h2>
+			
+
+			<div class="portfolio-thumnail kb-image-gallery-thumbnail">
+				<div class="link-out">
+					<a href="http://kevbost.github.io/kb-image-gallery" target="_blank">
+						<span class="label label-warning">Demo</span>
+					</a>
+					<a href="https://github.com/kevbost/kb-image-gallery" target="_blank">
+						<span class="label label-warning">View On Github</span>
+					</a>
+				</div>
+			</div>
+			<div class="under-portfolio">
+				<p><b>BackboneJS Image Gallery</b></p>
+				<p>This is a simple one page image gallery showcasing BackboneJS, its ability to switch views on the fly, and its router functionality-- displaying the ID of the current image in the URL.</p>
+				<div class="assets">
+						<span class="label label-info">temp</span>
+						<span class="label label-info">temp</span>
+						<span class="label label-info">temp</span>
+						<span class="label label-info">temp</span>
+						<span class="label label-info">temp</span>
+				</div>
+			</div>
+		</div> <!-- backbone image gallery -->
+
+<!-- ////////////////////////////////////////////////////// -->
 
 		<div class="jumbotron">
 			<br>portfolio

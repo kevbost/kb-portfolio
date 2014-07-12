@@ -10,3 +10,7 @@ window.onload = function() {
     // Target your .container, .wrapper, .post, etc.
     $(".container").fitVids();
 };
+
+$('.navlink').click(function(){
+	$('.navbar-toggle').click();
+})
