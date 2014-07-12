@@ -51,9 +51,10 @@
 			</nav>
 <!-- /nav -->
 <!-- main -->
-
-	<div class="container main">
-
+	<div class="container">
+		<div class="main">
+			iframe
+		</div>
 	</div>
 <!-- /main -->
 
@@ -62,49 +63,71 @@
 	  <canvas id="myCanvas" resize style='background:4D9BCC'></canvas>
 	</div>
 <!-- /paper js canvas -->
-
 	<script type="text/template" class="portfolio-template">
-		<br>
-		<br>portfolio
-		<br>
-		<br>portfolio
-		<br>
-		<br>portfolio
-		<br>
-		<br>portfolio
+
+		// ========================================================
+		<h1>Portfolio</h1>
+		<div class="jumbotron">
+
+			<a href="http://kevbost.github.io/timeline-creation-tool" target="_blank">
+				<h2>Timeline Creation Tool</h2>
+			</a>
+
+			<div class="portfolio-thumnail">
+			</div>
+
+			<p class="col-md-12 col-lg-12"><b>Final Project for the Iron Yard</b></p>
+			<p class="col-md-12 col-lg-12">This tool was designed to create a timeline of events.</p>
+			<div class="assets col-md-12 col-lg-12">
+					<span class="label label-info">PaperJS</span>
+					<span class="label label-info">Bootstrap</span>
+					<span class="label label-info">Jquery</span>
+					<span class="label label-info">SASS</span>
+					<span class="label label-info">JSON</span>
+			</div>
+		</div>
+		// ========================================================
+
+		// ========================================================
+		<div class="jumbotron">
+			<br>portfolio
+		</div>
+		// ========================================================
+		// ========================================================
+		<div class="jumbotron">
+			<br>portfolio
+		</div>
+		// ========================================================
+		// ========================================================
+		<div class="jumbotron">
+			<br>portfolio
+		</div>
+		// ========================================================
+		// ========================================================
 	</script>
 
 	<script type="text/template" class="about-template">
-		<br>
-		<br>about
-		<br>
-		<br>about
-		<br>
-		<br>about
-		<br>
-		<br>about
+		
+		<h2>about</h2>
+		<div class="jumbotron">
+		</div>
+	
 	</script>
 
 	<script type="text/template" class="contact-template">
-		<br>
-		<br>contact
-		<br>
-		<br>contact
-		<br>
-		<br>contact
-		<br>
-		<br>contact
+		
+		<h2>contact</h2>
+		<div class="jumbotron">
+		</div>
+
 	</script>
 
 	<script type="text/template" class="photography-template">
-		<br>
-		<br>photography
-		<br>
-		<br>photography
-		<br>
-		<br>photography
-		<br>
-		<br>photography
+		
+		<h2>photography</h2>
+		<div class="jumbotron">
+		</div>
+
 	</script>
 
 	<!-- build:js(.) scripts/vendor.js -->
@@ -113,6 +136,7 @@
 	<script src="bower_components/underscore/underscore.js"></script>
 	<script src="bower_components/backbone/backbone.js"></script>
 	<script src="bower_components/paper/dist/paper-full.js"></script>
+	<script src="bower_components/FitVids/jquery.fitvids.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -146,8 +170,8 @@
 		<script src="scripts/app-view.js"></script>
 		<script src="scripts/router.js"></script>
 		<script src="scripts/main.js"></script>
-		<script type="text/paperscript" src="scripts/paper.js" canvas="myCanvas"></script>
 		<!-- endbuild -->
+		<script type="text/paperscript" src="scripts/paper.js" canvas="myCanvas"></script>
 
 
 </body>
