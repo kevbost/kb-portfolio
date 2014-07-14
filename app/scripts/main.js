@@ -2,7 +2,7 @@
 
 var appView;
 
-// var portfolios = new PortfolioCollection();
+var portfolios = new PortfolioCollection();
 var app = new AppRouter();
 
 Backbone.history.start();

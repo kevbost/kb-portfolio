@@ -7,6 +7,6 @@ var Portfolio = Backbone.Model.extend({
 
 var PortfolioCollection = Backbone.Collection.extend({
   model: Portfolio,
-  url: '/scripts/portfolio-data.js'
+  url: 'scripts/portfolio-data.js'
   // comparator: function( Photo ) { return Photo.get('_id')}
 });
