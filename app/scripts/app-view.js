@@ -21,7 +21,6 @@ var PortfolioView = Backbone.View.extend({
 	render: function(){
 		var renderedTemplate = this.template();
 		this.$el.html(renderedTemplate);
-		return this;
 	}
 });
 

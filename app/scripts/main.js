@@ -2,7 +2,9 @@
 
 var appView;
 
+// var portfolios = new PortfolioCollection();
 var app = new AppRouter();
+
 Backbone.history.start();
 
 window.onload = function() {

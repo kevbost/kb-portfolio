@@ -15,6 +15,14 @@ var AppRouter = Backbone.Router.extend({
 
 	home: function() {
 		this.view = new PortfolioView();
+		
+			// portfolios.fetch().done(function(){
+			// 	portfolios.each(function(folio){
+			// 		this.view = new PortfolioView({model: folio})
+			// 	})
+			// 	// detailViewInstance = new DetailView({ model: photos.first() })
+			// })
+		
 		console.log('home was just pathed!')
 	},
 
