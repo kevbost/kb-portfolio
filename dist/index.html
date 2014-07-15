@@ -1,6 +1,115 @@
-<!DOCTYPE html><html class=no-js><head><meta charset=utf-8><title>kb portfolio</title><meta name=description content=""><meta name=viewport content="width=device-width, initial-scale=1"><link rel="shortcut icon" href=/6df2b309.favicon.ico><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/75d90e5e.main.css><body><!--[if lt IE 10]>
+<!DOCTYPE html><html class=no-js><head><meta charset=utf-8><title>kb portfolio</title><meta name=description content=""><meta name=viewport content="width=device-width, initial-scale=1"><link rel="shortcut icon" href=/6df2b309.favicon.ico><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/b1e3e22f.main.css><body><!--[if lt IE 10]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]--><!-- nav --><nav class="navbar navbar-fixed-top navbar-default" role=navigation><div class=container-fluid><!-- Brand and toggle get grouped for better mobile display --><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#bs-example-navbar-collapse-1><span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span></button> <a class=navbar-brand href=#>KevinBost|dot|com</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1><ul class="nav navbar-nav"><li class="portfolio navlink"><a href=#>PORTFOLIO</a></li><li class="about navlink"><a href=#about>ABOUT</a></li><li class="contact navlink"><a href=#contact>CONTACT</a></li><li class="photography navlink"><a href=#photography>PHOTOGRAPHY</a></li></ul><ul class="nav navbar-nav navbar-right"><li><a href="https://github.com/kevbost/" target=_blank>View My Profile On Github</a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><!-- /nav --><!-- main --><div class=container><div class=main></div></div><!-- /main --><!-- paper js canvas --><div id=background-canvas style="position:absolute; top:0; left:0; z-index:-1"><canvas id=myCanvas resize="" style=background:4D9BCC></canvas></div><!-- /paper js canvas --><script type=text/template class=portfolio-template><h1>Portfolio</h1>
+	<![endif]--><!-- nav --><nav class="navbar navbar-fixed-top navbar-default" role=navigation><div class=container-fluid><!-- Brand and toggle get grouped for better mobile display --><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#bs-example-navbar-collapse-1><span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span></button> <a class=navbar-brand href=#>KevinBost|dot|com</a></div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1><ul class="nav navbar-nav"><li class="portfolio navlink"><a href=#>PORTFOLIO</a></li><li class="about navlink"><a href=#about>ABOUT</a></li><li class="contact navlink"><a href=#contact>CONTACT</a></li><li class="photography navlink"><a href=#photography>PHOTOGRAPHY</a></li></ul><ul class="nav navbar-nav navbar-right"><li><a href="https://github.com/kevbost/" target=_blank><b>View My Profile On Github</b></a></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav><!-- /nav --><!-- main --><div class=container><div class=main></div></div><!-- /main --><!-- paper js canvas --><div id=background-canvas style="position:fixed; top:0; left:0; bottom:0; z-index:-1"><canvas id=myCanvas resize="" style=background:4D9BCC></canvas><script type=text/paperscript canvas=myCanvas>// Code ported to Paper.js from http://the389.com/9/1/
+		// with permission.
+
+		var values = {
+			friction: 0.8,
+			timeStep: 0.01,
+			amount: 15,
+			mass: 2,
+			count: 0
+		};
+		values.invMass = 1 / values.mass;
+
+		var path, springs;
+		var size = view.size * [1.2, 1];
+
+		var Spring = function(a, b, strength, restLength) {
+			this.a = a;
+			this.b = b;
+			this.restLength = restLength || 80;
+			this.strength = strength ? strength : 0.55;
+			this.mamb = values.invMass * values.invMass;
+		};
+
+		Spring.prototype.update = function() {
+			var delta = this.b - this.a;
+			var dist = delta.length;
+			var normDistStrength = (dist - this.restLength) /
+					(dist * this.mamb) * this.strength;
+			delta.y *= normDistStrength * values.invMass * 0.2;
+			if (!this.a.fixed)
+				this.a.y += delta.y;
+			if (!this.b.fixed)
+				this.b.y -= delta.y;
+		};
+
+
+		function createPath(strength) {
+			var path = new Path({
+				fillColor: 'black'
+			});
+			springs = [];
+			for (var i = 0; i <= values.amount; i++) {
+				var segment = path.add(new Point(i / values.amount, 0.5) * size);
+				var point = segment.point;
+				if (i == 0 || i == values.amount)
+					point.y += size.height;
+				point.px = point.x;
+				point.py = point.y;
+				// The first two and last two points are fixed:
+				point.fixed = i < 2 || i > values.amount - 2;
+				if (i > 0) {
+					var spring = new Spring(segment.previous.point, point, strength);
+					springs.push(spring);
+				}
+			}
+			path.position.x -= size.width / 4;
+			return path;
+		}
+
+		function onResize() {
+			if (path)
+				path.remove();
+			size = view.bounds.size * [2, 1];
+			path = createPath(0.1);
+		}
+
+		function onMouseMove(event) {
+			var location = path.getNearestLocation(event.point);
+			var segment = location.segment;
+			var point = segment.point;
+
+			if (!point.fixed && location.distance < size.height / 4) {
+				var y = event.point.y;
+				point.y += (y - point.y) / 6;
+				if (segment.previous && !segment.previous.fixed) {
+					var previous = segment.previous.point;
+					previous.y += (y - previous.y) / 24;
+				}
+				if (segment.next && !segment.next.fixed) {
+					var next = segment.next.point;
+					next.y += (y - next.y) / 24;
+				}
+			}
+		}
+
+		function onFrame(event) {
+			updateWave(path);
+		}
+
+		function updateWave(path) {
+			var force = 1 - values.friction * values.timeStep * values.timeStep;
+			for (var i = 0, l = path.segments.length; i < l; i++) {
+				var point = path.segments[i].point;
+				var dy = (point.y - point.py) * force;
+				point.py = point.y;
+				point.y = Math.max(point.y + dy, 0);
+			}
+
+			for (var j = 0, l = springs.length; j < l; j++) {
+				springs[j].update();
+			}
+			path.smooth();
+		}
+
+		function onKeyDown(event) {
+			if (event.key == 'space') {
+				path.fullySelected = !path.fullySelected;
+				path.fillColor = path.fullySelected ? null : 'black';
+			}
+		}</script></div><!-- /paper js canvas --><script type=text/template class=portfolio-template><h1>Portfolio</h1>
 		
 		<div class="jumbotron">
 
@@ -253,4 +362,4 @@
 		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
 		e.src='//www.google-analytics.com/analytics.js';
 		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-		ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/6b5da0e8.plugins.js></script><script src=scripts/19abf6d5.main.js></script><script type=text/paperscript src=scripts/paper.js canvas=myCanvas></script>
+		ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/6b5da0e8.plugins.js></script><script src=scripts/19abf6d5.main.js></script>
