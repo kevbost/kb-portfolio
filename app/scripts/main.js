@@ -19,9 +19,10 @@ $('.navlink').click(function(){
 	$('.navbar-toggle').click();
 })
 
-$( ".under-nav-toggle, .icon-container" ).click(function() {
+$( ".under-nav-toggle, .open-icon, .close-icon" ).click(function() {
 		$(".main").toggleClass('move-up');
 		$(".main").toggleClass('move-down');
-	$( ".under-toggle, .icon-container" ).slideToggle( "slow", function() {
+	$(".close-container").slideToggle( "slow", function() {});
+	$( ".under-toggle, .open-container" ).slideToggle( "slow", function() {
 	});
 });
