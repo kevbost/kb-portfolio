@@ -1,5 +1,7 @@
 "use strict";
 
+Parse.initialize("CMse2ufXeodygby0AqhmGOq3n4PaOa9eDxxpMEoK", "R5v3ZSW0NQVBN4fiTmw88QzbWsGBkxzVRzx6IOoj");
+
 var appView;
 
 var portfolios = new PortfolioCollection();
