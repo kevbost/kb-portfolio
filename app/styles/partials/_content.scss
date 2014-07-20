@@ -1,6 +1,6 @@
 body {
 	font-size: 62.5%;
-	padding-top: 60px;
+	// padding-top: 60px;
 	padding-bottom: 0px;
 	background-image: url('http://subtlepatterns.com/patterns/tex2res4.png');
 	// background-image: url('http://subtlepatterns.com/patterns/noisy.png');
@@ -33,6 +33,7 @@ img {
 	.navbar-nav {
 		font-size: 2em;
 	}
+	border-radius: 0;
 	.navbar-brand {
 		img {
 			top: 0;
@@ -52,7 +53,33 @@ img {
 // ==================================================
 
 .main {
-  // background-color: $gray-lighter;
+	// margin-top: -40px;
+}
+
+.move-up {
+	animation-name: moveup;
+	animation-duration: .7s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+@keyframes moveup {
+    0% { margin-top: 0 }
+    100% { margin-top: -40px }
+}
+
+.move-down {
+	animation-name: movedown;
+	animation-duration: .7s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+@keyframes movedown {
+    0% { margin-top: -40px }
+    100% { margin-top: 0 }
 }
 
 .jumbotron {
@@ -81,6 +108,66 @@ img {
 }
 // ==================================================
 
+.under-nav-container {
+	position: relative;
+	top: -20px;
+	margin: 0 auto;
+}
+
+.under-nav-toggle {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	margin: 0 auto;
+	height: 5px;
+	width: 100%;
+	background-color: $gray-light;
+	// background-image: url("../images/arrow-down-min.png");
+	background-repeat: repeat-x;
+	cursor: pointer;
+}
+
+.icon-container	{
+	// height: 50px;
+	width: 90%;
+	margin-left: 10px;
+	background-color: transparent;
+	margin: 0 auto;
+	position: relative;
+	z-index: -5;
+	// margin-bottom: 20px;
+		margin-top: -10px;
+}
+
+.under-nav-icon {
+	width: 50px;
+	height: 30px;
+	background-color: orange;
+	// position: absolute;
+}
+
+.under-toggle {
+	height: 150px;
+	display: none;
+	position: relative;
+	top: -5px;
+	z-index: -2;
+}
+
+.under-nav {
+	height: 150px;
+	width: 90%;
+	margin-left: 10px;
+	background-color: $gray-lighter;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	// padding-top: -20px;
+}
+
+// ==================================================
 .portfolio-thumnail {
 	position: relative;
 	display: inline-block;

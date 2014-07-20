@@ -18,3 +18,10 @@ window.onload = function() {
 $('.navlink').click(function(){
 	$('.navbar-toggle').click();
 })
+
+$( ".under-nav-toggle, .icon-container" ).click(function() {
+		$(".main").toggleClass('move-up');
+		$(".main").toggleClass('move-down');
+	$( ".under-toggle, .icon-container" ).slideToggle( "slow", function() {
+	});
+});
