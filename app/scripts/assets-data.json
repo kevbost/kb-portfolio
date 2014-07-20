@@ -1,0 +1,24 @@
+[
+    {
+        "assets": [
+            {
+                "asset1": "PaperJS"
+            },
+            {
+                "asset2": "UnderscoreJS"
+            },
+            {
+                "asset3": "Bootstrap"
+            },
+            {
+                "asset4": "Jquery"
+            },
+            {
+                "asset5": "SASS"
+            },
+            {
+                "asset6": "JSON"
+            }
+        ]
+    }
+]

@@ -14,12 +14,17 @@ var PortfolioView = Backbone.View.extend({
 	},
 
 	initialize: function(){
-		$('.main').html(this.el);
-		this.render();
+		$('.main').html("")
+
+		var that = this;
+		setTimeout(function() {
+			$('.main').append(that.el);
+			that.render();
+		}, 50);
 	},
 
 	render: function(){
-		var renderedTemplate = this.template();
+		var renderedTemplate = this.template(this.model.attributes);
 		this.$el.html(renderedTemplate);
 	}
 });
