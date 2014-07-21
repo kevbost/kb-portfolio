@@ -3,7 +3,8 @@
 var AppRouter = Backbone.Router.extend({
 	
 	routes: {
-		"":				"home",
+		"": 			"home",
+		":any":			"home",
 		"about":		"about",
 		"contact":		"contact",
 		"photography":	"photography"
@@ -14,6 +15,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	home: function() {
+		console.log('home was just pathed!')
 		this.fetchPromise = portfolios.fetch();
 
 		this.fetchPromise.done(function(){
@@ -21,19 +23,18 @@ var AppRouter = Backbone.Router.extend({
 			new PortfolioView({model: foo})
 			})
 		})
-		console.log('home was just pathed!')
-	},
-
-	about: function() {
-		this.view = new AboutView();
-	},
-
-	contact: function() {
-		this.view = new ContactView();
-	},
-
-	photography: function() {
-		this.view = new PhotographyView();
 	}
+
+	// about: function() {
+	// 	this.view = new AboutView();
+	// },
+
+	// contact: function() {
+	// 	this.view = new ContactView();
+	// },
+
+	// photography: function() {
+	// 	this.view = new PhotographyView();
+	// }
 
 });

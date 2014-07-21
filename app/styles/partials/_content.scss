@@ -6,11 +6,11 @@ $brand-warning-lighter: lighten(#f0ad4e, 50%) !default;
 $brand-danger:          #d9534f !default;
 
 // SUBTLE TEA TIME
-// $brand-one: 			#5E3635;
-// $brand-two:				#5F4F35;
-// $brand-three:			#616B4E;
-// $brand-four:			#568562;
-// $brand-five:			#40997B;
+$brand-one: 			#5E3635;
+$brand-two:				#5F4F35;
+$brand-three:			#616B4E;
+$brand-four:			#568562;
+$brand-five:			#40997B;
 
 // TRIAD SPENCE
 // $brand-one: 			#484340;
@@ -20,18 +20,20 @@ $brand-danger:          #d9534f !default;
 // $brand-five:			#807D94;
 
 // MONOCHROME
-$brand-one: 			#484340;
-$brand-two:				#946C52;
-$brand-three:			#455543;
-$brand-four:			#64627B;
-$brand-five:			#807D94;
+// $brand-one: 			#ECEBEB; // light white
+// $brand-two:				#A09E9E; // light grey
+// $brand-three:			#666363; // middle grey
+// $brand-four:			#413D3D; // dark middle grey
+// $brand-five:			#2B2B2B; // dark grey
 
 body {
 	font-size: 62.5%;
 	// padding-top: 60px;
 	padding-bottom: 0px;
-	background-color: $brand-one;
+	// background-color: $brand-one;
+	background-color: $gray-darker;
 	color: darken($brand-one, 0%);
+	position: relative;
 	// background-image: url('http://subtlepatterns.com/patterns/tex2res4.png');
 	// background-image: url('http://subtlepatterns.com/patterns/noisy.png');
 	// background-image: url('http://subtlepatterns.com/patterns/old_mathematics.png');
@@ -61,17 +63,18 @@ img {
 }
 
 .navbar {
-	background-color: lighten($brand-four, 30%);
+	background-color: $gray-lighter;
 	border-radius: 0;
+	z-index: 4;
 	.navbar-nav {
 		font-size: 2em;
-		color: lighten($brand-four, 0%);
+		color: $gray;
 		&:hover {
-			color: darken($brand-four, 10%);
+			color: $gray-light;
 		}
 	}
 	.navbar-right {
-		color: lighten($brand-four, 0%);
+		color: $gray;
 	}
 	img {
 		top: 0;
@@ -79,26 +82,68 @@ img {
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-		background-color: lighten($brand-four, 20%);
+		background-color: $gray;
 }
 .navbar-default, .navbar-collapse, .navbar-toggle {
-	border-color: lighten($brand-four, 30%) !important;
+	border-color: $gray-darker !important;
 		.navbar-nav{
 		li{
 			a{
-				color: lighten($brand-four, 0%);
+				color: $gray;
 				margin-top: 2px;
 				&:hover {
-					color: darken($brand-four, 10%);
+					color: $gray-light;
 				}
 				&:focus {
-					color: darken($brand-four, 10%);
+					color: $gray-light;
 				}
 			}
 		}
 	}
 	.navbar-brand {
-		color: lighten($brand-four, 0%);
+		color: $gray;
+	}
+}
+
+// ==================================================
+.under-nav-container {
+	position: relative;
+	top: -20px;
+	margin: 0 auto;
+	z-index: 3;
+	.under-nav-toggle {
+		border-bottom-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+		-webkit-border-bottom-right-radius: 3px;
+		-webkit-border-bottom-left-radius: 3px;
+		-moz-border-radius-bottomright: 3px;
+		-moz-border-radius-bottomleft: 3px;
+		margin: 0 auto;
+		height: 10px;
+		width: 100%;
+		// background-color: lighten($brand-two, 20%);
+		background-color: $gray-lighter;
+		// background-image: url("../images/arrow-down-min.png");
+		background-repeat: repeat-x;
+		cursor: pointer;
+	}
+	.under-toggle {
+		height: 150px;
+		display: none;
+		position: relative;
+		top: -5px;
+		z-index: -2;
+		margin-bottom: 40px;
+		.under-nav {
+			height: 150px;
+			width: 90%;
+			margin-left: 10px;
+			// background-color: lighten($brand-two, 30%);
+			background-color: $gray;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			// padding-top: -20px;
+		}
 	}
 }
 
@@ -112,14 +157,36 @@ img {
 	// z-index: -1;
 }
 // ==================================================
-
-
-.edit {
-	// margin-top: -30px;
+.persistent-navbar, .persistent-collapse {
+	z-index: 1;
+	// background-color: orange;
+	max-height: 25px;
+		.nav{
+			margin: 0;
+		li{
+			display: inline-block;
+			a{
+				color: $gray;
+				margin-top: 0px;
+				padding: 0;
+				margin-right: 10px;
+				&:hover {
+					color: $gray-light;
+					background-color: $gray;
+				}
+				&:focus {
+					color: $gray-light;
+					background-color: $gray;
+				}
+			}
+		}
+	}
 }
 
-.main {
-	// background-color: white;
+.persistent-collapse {
+}
+.edit {
+	// margin-top: -30px;
 }
 
 .jumbotron {
@@ -144,47 +211,45 @@ img {
 		}
 	}
 }
-
 // ==================================================
-
-.under-nav-container {
+.top-bg {
+	background-color: $gray-light;
+	margin-top: -30px;
 	position: relative;
-	top: -20px;
-	margin: 0 auto;
-	.under-nav-toggle {
-		border-bottom-right-radius: 3px;
-		border-bottom-left-radius: 3px;
-		-webkit-border-bottom-right-radius: 3px;
-		-webkit-border-bottom-left-radius: 3px;
-		-moz-border-radius-bottomright: 3px;
-		-moz-border-radius-bottomleft: 3px;
-		margin: 0 auto;
-		height: 10px;
-		width: 100%;
-		background-color: lighten($brand-two, 20%);
-		// background-image: url("../images/arrow-down-min.png");
-		background-repeat: repeat-x;
-		cursor: pointer;
+	z-index: 1;
+	.top {
+		// height: 400px;
+		.top-display {
+			// padding-top: 20px;
+			min-height: 100vh;
+			// background-color: lighten($gray-darker, 10%)
+		
+		}
 	}
-	.under-toggle {
-		height: 150px;
-		display: none;
-		position: relative;
-		top: -5px;
-		z-index: -2;
-		.under-nav {
-			height: 150px;
-			width: 90%;
-			margin-left: 10px;
-			background-color: lighten($brand-two, 30%);
-			margin: 0 auto;
-			margin-bottom: 20px;
-			// padding-top: -20px;
+}
+// ==================================================
+.about {
+	// height: 400px;
+	.about-display {
+		padding-top: 20px;
+		min-height: 100vh;
+		// background-color: lighten($gray-darker, 20%)
+	}
+}
+// ==================================================
+.portfolio {
+	// background-color: white;
+	.portfolio-display {
+		padding-top: 20px;
+		display: inline-block;
+		height: auto;
+		// background-color: orange;
+		.thumbnail{
+			min-height: 450px;
 		}
 	}
 }
 
-// ==================================================
 .portfolio-thumnail {
 	position: relative;
 	display: inline-block;
@@ -207,7 +272,15 @@ img {
 }
 
 // ==================================================
-
+.photography {
+	// height: 400px;
+	.photography-display {
+		padding-top: 20px;
+		min-height: 100vh;
+		// background-color: lighten($gray-darker, 20%)
+	}
+}
+// ==================================================
 
 .timeline-thumbnail {
 	background-image: url("../images/timeline.png");
@@ -244,17 +317,21 @@ img {
 .assets {
 	// float: left;
 	font-size: 3em;
+	.label {
+		display: inline-block;
+	}
 	.label-primary {
 		background-color: $brand-info;
-		border-radius: 0;
+		margin-top: 5px;
+		// border-radius: 0;
 		// color: black;
 		// margin-right: -5px;
-		border-bottom: 4px solid darken($brand-info, 10%);
+		// border-bottom: 4px solid darken($brand-info, 10%);
 		// border-right: 3px solid $gray-lighter;
-		border-left: 8px solid lighten($brand-info, 20%);
+		// border-left: 8px solid lighten($brand-info, 20%);
 		&:hover {
-			border-left: 6px solid lighten($brand-info, 20%);
-			margin-right: 2px;
+			// border-left: 6px solid lighten($brand-info, 20%);
+			// margin-right: 2px;
 		}
 	}
 }
@@ -262,6 +339,13 @@ img {
 .under-portfolio {
 	height: 100%;
 	margin-top: 20px;
+	h3 {
+		font-size: 3.4em;
+		margin-top: 0;
+	}
+	p {
+		font-size: 2.2em;
+	}
 }
 
 // ==================================================

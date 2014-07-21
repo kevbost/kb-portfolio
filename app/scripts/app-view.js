@@ -14,12 +14,15 @@ var PortfolioView = Backbone.View.extend({
 	},
 
 	initialize: function(){
-		$('.main').html("")
+		// $('.main').html("");
 
 		var that = this;
 		setTimeout(function() {
-			$('.main').append(that.el);
+			$('.portfolio-display').append(that.el);
 			that.render();
+			if( $('.label-primary').is(':empty') ) {
+				$('.label-primary:empty').css('background-color','transparent')
+			}
 		}, 50);
 	},
 
@@ -29,62 +32,62 @@ var PortfolioView = Backbone.View.extend({
 	}
 });
 
-var AboutView = Backbone.View.extend({
+// var AboutView = Backbone.View.extend({
 	
-	template: _.template($('.about-template').text()),
+// 	template: _.template($('.about-template').text()),
 
-	events: {
+// 	events: {
 
-	},
+// 	},
 
-	initialize: function(){
-		$('.main').html(this.el);
-		this.render();
-	},
+// 	initialize: function(){
+// 		$('.main').prepend(this.el);
+// 		this.render();
+// 	},
 
-	render: function(){
-		var renderedTemplate = this.template();
-		this.$el.html(renderedTemplate);
-		return this;
-	}
-});
+// 	render: function(){
+// 		var renderedTemplate = this.template();
+// 		this.$el.html(renderedTemplate);
+// 		return this;
+// 	}
+// });
 
-var ContactView = Backbone.View.extend({
+// var ContactView = Backbone.View.extend({
 
-	template: _.template($('.contact-template').text()),
+// 	template: _.template($('.contact-template').text()),
 
-	events: {
+// 	events: {
 
-	},
+// 	},
 
-	initialize: function(){
-		$('.main').html(this.el);
-		this.render();
-	},
+// 	initialize: function(){
+// 		$('.main').html(this.el);
+// 		this.render();
+// 	},
 
-	render: function(){
-		var renderedTemplate = this.template();
-		this.$el.html(renderedTemplate);
-		return this;
-	}
-});
+// 	render: function(){
+// 		var renderedTemplate = this.template();
+// 		this.$el.html(renderedTemplate);
+// 		return this;
+// 	}
+// });
 
-var PhotographyView = Backbone.View.extend({
+// var PhotographyView = Backbone.View.extend({
 	
-	template: _.template($('.photography-template').text()),
+// 	template: _.template($('.photography-template').text()),
 
-	events: {
+// 	events: {
 
-	},
+// 	},
 
-	initialize: function(){
-		$('.main').html(this.el);
-		this.render();
-	},
+// 	initialize: function(){
+// 		$('.main').html(this.el);
+// 		this.render();
+// 	},
 
-	render: function(){
-		var renderedTemplate = this.template();
-		this.$el.html(renderedTemplate);
-		return this;
-	}
-});
+// 	render: function(){
+// 		var renderedTemplate = this.template();
+// 		this.$el.html(renderedTemplate);
+// 		return this;
+// 	}
+// });

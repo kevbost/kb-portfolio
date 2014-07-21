@@ -20,8 +20,8 @@ $('.navlink').click(function(){
 })
 
 $( ".under-nav-toggle, .open-icon, .close-icon" ).click(function() {
-		$(".main").toggleClass('move-up');
-		$(".main").toggleClass('move-down');
 	$( ".under-toggle").slideToggle( "slow", function() {
 	});
 });
+
+$('body').scrollspy({ target: '.navbar' })
