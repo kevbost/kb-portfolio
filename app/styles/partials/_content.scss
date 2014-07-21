@@ -1,25 +1,55 @@
+$brand-primary:         #428bca !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-warning-lighter: lighten(#f0ad4e, 50%) !default;
+$brand-danger:          #d9534f !default;
+
+// SUBTLE TEA TIME
+// $brand-one: 			#5E3635;
+// $brand-two:				#5F4F35;
+// $brand-three:			#616B4E;
+// $brand-four:			#568562;
+// $brand-five:			#40997B;
+
+// TRIAD SPENCE
+// $brand-one: 			#484340;
+// $brand-two:				#946C52;
+// $brand-three:			#455543;
+// $brand-four:			#64627B;
+// $brand-five:			#807D94;
+
+// MONOCHROME
+$brand-one: 			#484340;
+$brand-two:				#946C52;
+$brand-three:			#455543;
+$brand-four:			#64627B;
+$brand-five:			#807D94;
+
 body {
 	font-size: 62.5%;
 	// padding-top: 60px;
 	padding-bottom: 0px;
-	background-image: url('http://subtlepatterns.com/patterns/tex2res4.png');
+	background-color: $brand-one;
+	color: darken($brand-one, 0%);
+	// background-image: url('http://subtlepatterns.com/patterns/tex2res4.png');
 	// background-image: url('http://subtlepatterns.com/patterns/noisy.png');
 	// background-image: url('http://subtlepatterns.com/patterns/old_mathematics.png');
 }
 
 a {
-  color: #333333;
-  text-decoration: none;
+	color: #333333;
+	text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: yellow;
-    text-decoration: none;
-  }
+	&:hover,
+	&:focus {
+		color: yellow;
+		text-decoration: none;
+	}
 
-  &:focus {
-    @include tab-focus();
-  }
+	&:focus {
+		@include tab-focus();
+	}
 }
 
 h1{
@@ -29,15 +59,46 @@ h1{
 img {
 	max-width:100%;
 }
+
 .navbar {
+	background-color: lighten($brand-four, 30%);
+	border-radius: 0;
 	.navbar-nav {
 		font-size: 2em;
-	}
-	border-radius: 0;
-	.navbar-brand {
-		img {
-			top: 0;
+		color: lighten($brand-four, 0%);
+		&:hover {
+			color: darken($brand-four, 10%);
 		}
+	}
+	.navbar-right {
+		color: lighten($brand-four, 0%);
+	}
+	img {
+		top: 0;
+	}
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+		background-color: lighten($brand-four, 20%);
+}
+.navbar-default, .navbar-collapse, .navbar-toggle {
+	border-color: lighten($brand-four, 30%) !important;
+		.navbar-nav{
+		li{
+			a{
+				color: lighten($brand-four, 0%);
+				margin-top: 2px;
+				&:hover {
+					color: darken($brand-four, 10%);
+				}
+				&:focus {
+					color: darken($brand-four, 10%);
+				}
+			}
+		}
+	}
+	.navbar-brand {
+		color: lighten($brand-four, 0%);
 	}
 }
 
@@ -52,64 +113,38 @@ img {
 }
 // ==================================================
 
-.main {
-	// margin-top: -20px;
-}
 
 .edit {
-	margin-top: -30px;
+	// margin-top: -30px;
 }
 
-.move-up {
-	animation-name: moveup;
-	animation-duration: .7s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease;
-}
-
-@keyframes moveup {
-    0% { margin-top: 0 }
-    100% { margin-top: -5px }
-}
-
-.move-down {
-	animation-name: movedown;
-	animation-duration: .7s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease;
-}
-
-@keyframes movedown {
-    0% { margin-top: -5px }
-    100% { margin-top: 0 }
+.main {
+	// background-color: white;
 }
 
 .jumbotron {
-	background-image: url('http://subtlepatterns.com/patterns/old_wall.png');
-  @media screen and (min-width: $screen-sm-min) {
-	padding-top:    ($jumbotron-padding * 1);
-	padding-bottom: ($jumbotron-padding * 1);
+	// background-image: url('http://subtlepatterns.com/patterns/old_wall.png');
+	background-color: lighten($brand-four, 50%);
+	border-radius: 0 !important;
+	@media screen and (min-width: $screen-sm-min) {
+		padding-top:    ($jumbotron-padding / 2);
+		padding-bottom: ($jumbotron-padding * 1);
 
-	.container & {
-	  padding-left:  ($jumbotron-padding * 1);
-	  padding-right: ($jumbotron-padding * 1);
-	}
-
-	h1,
-	.h1 {
-	  font-size: ($font-size-base * 4.5);
-	}
-  }
-}
-// ==================================================
-.navbar-right {
-	background-color: inherit;
-	@media screen and (max-width: $screen-sm-min) {
-		background-color: $brand-warning-lighter;
+		.container & {
+			padding-left:  ($jumbotron-padding * 1);
+			padding-right: ($jumbotron-padding * 1);
+			}
+		h1 {
+			font-size: ($font-size-base * 4.5);
+			}
+		h2 {
+			margin: 0;
+			margin-bottom: 0.15em;
+			font-size: ($font-size-base * 4);
+		}
 	}
 }
+
 // ==================================================
 
 .under-nav-container {
@@ -124,9 +159,9 @@ img {
 		-moz-border-radius-bottomright: 3px;
 		-moz-border-radius-bottomleft: 3px;
 		margin: 0 auto;
-		height: 5px;
+		height: 10px;
 		width: 100%;
-		background-color: $gray-light;
+		background-color: lighten($brand-two, 20%);
 		// background-image: url("../images/arrow-down-min.png");
 		background-repeat: repeat-x;
 		cursor: pointer;
@@ -141,48 +176,10 @@ img {
 			height: 150px;
 			width: 90%;
 			margin-left: 10px;
-			background-color: $gray-lighter;
+			background-color: lighten($brand-two, 30%);
 			margin: 0 auto;
 			margin-bottom: 20px;
 			// padding-top: -20px;
-		}
-	}
-	.open-container	{
-		// height: 50px;
-		width: 90%;
-		margin-left: 10px;
-		background-color: transparent;
-		margin: 0 auto;
-		position: relative;
-		z-index: 1;
-		// margin-bottom: 20px;
-		margin-top: 0px;
-		.open-icon {
-			width: 50px;
-			height: 20px;
-			background-color: orange;
-			// position: absolute;
-			cursor: pointer;
-		}
-	}
-	.close-container	{
-		// height: 50px;
-		display: none;
-		width: 90%;
-		margin-left: 10px;
-		background-color: transparent;
-		margin: 0 auto;
-		position: relative;
-		right: 0px;
-		top: -5px;
-		z-index: 1;
-		.close-icon {
-			width: 50px;
-			height: 20px;
-			background-color: orange;
-			float: right;
-			// position: absolute;
-			cursor: pointer;
 		}
 	}
 }
@@ -247,9 +244,24 @@ img {
 .assets {
 	// float: left;
 	font-size: 3em;
+	.label-primary {
+		background-color: $brand-info;
+		border-radius: 0;
+		// color: black;
+		// margin-right: -5px;
+		border-bottom: 4px solid darken($brand-info, 10%);
+		// border-right: 3px solid $gray-lighter;
+		border-left: 8px solid lighten($brand-info, 20%);
+		&:hover {
+			border-left: 6px solid lighten($brand-info, 20%);
+			margin-right: 2px;
+		}
+	}
 }
 
 .under-portfolio {
 	height: 100%;
 	margin-top: 20px;
 }
+
+// ==================================================

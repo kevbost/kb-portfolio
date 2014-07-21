@@ -22,7 +22,6 @@ $('.navlink').click(function(){
 $( ".under-nav-toggle, .open-icon, .close-icon" ).click(function() {
 		$(".main").toggleClass('move-up');
 		$(".main").toggleClass('move-down');
-	$(".close-container").slideToggle( "slow", function() {});
-	$( ".under-toggle, .open-container" ).slideToggle( "slow", function() {
+	$( ".under-toggle").slideToggle( "slow", function() {
 	});
 });
