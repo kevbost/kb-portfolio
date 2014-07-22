@@ -39,15 +39,20 @@ $('.navlink').click(function(){
 	$('.navbar-toggle').click();
 	})
 $( ".under-nav-toggle, .open-icon, .close-icon" ).click(function() {
-	$( ".under-toggle").slideToggle( "slow" );
+	$( ".under-toggle").slideToggle( "slow" ).toggleClass('active');
 });
 
 $(window).scroll( function() { 
 	var scrolled_val = $(document).scrollTop().valueOf();
-	// console.log(scrolled_val+ ' = scroll value');
 	if (scrolled_val <= 100) {
 		$('.persistent-navbar').fadeOut(500).css('display','none')
 	} else if (scrolled_val >= 100) {
 		$('.persistent-navbar').fadeIn(2000).css('display','inherit')
 	}
 });
+
+// setInterval(function(){
+// 	if ($('.under-toggle').hasClass('active')) {
+// 		console.log('yeh boi')
+// 	}
+// }, 2000)
