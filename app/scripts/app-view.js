@@ -19,7 +19,7 @@ var PortfolioView = Backbone.View.extend({
 				$('.label-primary:empty').css('background-color','transparent')
 			}
 			scrollReveal.init();
-		}, 50);
+		}, 500);
 	},
 	render: function(){
 		var renderedTemplate = this.template(this.model.attributes);

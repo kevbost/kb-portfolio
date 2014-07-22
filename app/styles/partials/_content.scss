@@ -222,17 +222,39 @@ img {
 }
 // ==================================================
 .top-bg {
-	background-color: $gray-light;
+	background: url('../images/cyan-left.jpg') no-repeat left 0px top,
+				url('../images/cyan-right.jpg') no-repeat right 0px top,
+				url('../images/cyan-repeat.jpg') repeat-x;
+	background-size: contain,
+					contain,
+					contain;
+
+	// background-size: 
+	// background-color: $gray-light;
+	// background-repeat: repeat;
+	// background-image: url('../images/tile-test.png');
+	// background-position: -150px;
+	// background-origin: content-box;
+	// background-image: url('../images/cyanotype-edit-repeat.png');
+		                       	
 	margin-top: -30px;
 	position: relative;
 	z-index: 1;
 	.top {
 		// height: 400px;
 		.top-display {
-			// padding-top: 20px;
 			min-height: 100vh;
+			// padding-top: 20px;
 			// background-color: lighten($gray-darker, 10%)
-		
+			.top-intro {
+				// position: absolute;
+				background-color: #1796D3;
+				// width: 50%;
+				height: 200px;
+				// margin-left: 25vw;
+				// margin-right: 25vw;
+				margin-top: 25vh;
+			}
 		}
 	}
 }
