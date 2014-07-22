@@ -3,19 +3,14 @@
 var PortfolioView = Backbone.View.extend({
 // If you want an added class name
 // and to change DIV to LI or INPUT etc,
-
-// className: 'blah',
+	className: 'porfolio-view',
 // tagName: 'li',
-
 	template: _.template($('.portfolio-template').text()),
-
 	events: {
 
 	},
-
 	initialize: function(){
-		// $('.main').html("");
-
+		$('.portfolio-display').html("");
 		var that = this;
 		setTimeout(function() {
 			$('.portfolio-display').append(that.el);
@@ -26,7 +21,6 @@ var PortfolioView = Backbone.View.extend({
 			scrollReveal.init();
 		}, 50);
 	},
-
 	render: function(){
 		var renderedTemplate = this.template(this.model.attributes);
 		this.$el.html(renderedTemplate);

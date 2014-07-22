@@ -21,7 +21,7 @@
 	<![endif]-->
 
 <!-- nav -->
-	<nav class="navbar navbar-top navbar-default" role="navigation">
+	<nav data-scroll-reveal="enter top, move 40px over .5s" class="navbar navbar-top navbar-default" role="navigation">
 		<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -31,15 +31,15 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#top">KEVINBOST</a>
+			<a data-scroll-nav="0" class="navbar-brand" href="#top">KEVINBOST</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="navbar-collapse-1 top">
 			<ul class="nav navbar-nav">
 			<!-- <li class="portfolio navlink"><a href="#">PORTFOLIO</a></li> -->
- 			<li class="about-link navlink"><a href="#about">ABOUT</a></li>
-			<li class="portfolio-link navlink"><a href="#portfolio">PORTFOLIO</a></li>
-			<li class="photography-link navlink"><a href="#photography">PHOTOGRAPHY</a></li>
+ 			<li data-scroll-nav="1" class="about-link navlink"><a href="#about">ABOUT</a></li>
+			<li data-scroll-nav="2" class="portfolio-link navlink"><a href="#portfolio">PORTFOLIO</a></li>
+			<li data-scroll-nav="3" class="photography-link navlink"><a href="#photography">PHOTOGRAPHY</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
@@ -60,10 +60,10 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="persistent-collapse">
 			<ul class="nav navbar-nav">
-				<li class="top-link navlink"><a href="#top">TOP</a></li>
-				<li class="about-link navlink"><a href="#about">ABOUT</a></li>
-				<li class="portfolio-link navlink"><a href="#portfolio">PORTFOLIO</a></li>
-				<li class="photography-link navlink"><a href="#photography">PHOTOGRAPHY</a></li>
+				<li data-scroll-nav="0" class="top-link navlink"><a href="#top">TOP</a></li>
+				<li data-scroll-nav="1" class="about-link navlink"><a href="#about">ABOUT</a></li>
+				<li data-scroll-nav="2" class="portfolio-link navlink"><a href="#portfolio">PORTFOLIO</a></li>
+				<li data-scroll-nav="3" class="photography-link navlink"><a href="#photography">PHOTOGRAPHY</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -84,22 +84,22 @@
 <!-- /under nav -->
 
 <!-- main -->
-	<div data-scroll-reveal class="container-fluid top-bg">
+	<div data-scroll-reveal data-scroll-index="0" class="container-fluid top-bg">
 		<div class="top">
 			<div class="top-display"></div>
 		</div>
 	</div>
-	<div data-scroll-reveal class="container-fluid">
+	<div data-scroll-reveal data-scroll-index="1" class="container-fluid">
 		<div class="about" id="about">
 			<div class="about-display"></div>
 		</div>
 	</div>
-	<div data-scroll-reveal class="container">
+	<div data-scroll-reveal data-scroll-index="2" class="container">
 		<div class="portfolio" id="portfolio">
 			<div class="portfolio-display"></div>
 		</div>
 	</div>
-	<div data-scroll-reveal class="container-fluid">
+	<div data-scroll-reveal data-scroll-index="3" class="container-fluid">
 		<div class="photography" id="photography">
 			<div class="photography-display"></div>
 		</div>
@@ -113,6 +113,7 @@
 		</script>
 	</div>
 <!-- /paper js canvas -->
+
 
 	<script type="text/template" class="portfolio-template">
 			<div class="col-sm-6 col-md-6">
@@ -197,6 +198,7 @@
 	<script src="bower_components/paper/dist/paper-full.js"></script>
 	<script src="bower_components/FitVids/jquery.fitvids.js"></script>
 	<script src="bower_components/scrollReveal.js/scrollReveal.js"></script>
+	<script src="bower_components/ScrollIt/scrollIt.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
