@@ -84,22 +84,22 @@
 <!-- /under nav -->
 
 <!-- main -->
-	<div class="container-fluid top-bg">
+	<div data-scroll-reveal class="container-fluid top-bg">
 		<div class="top">
 			<div class="top-display"></div>
 		</div>
 	</div>
-	<div class="container-fluid">
+	<div data-scroll-reveal class="container-fluid">
 		<div class="about" id="about">
 			<div class="about-display"></div>
 		</div>
 	</div>
-	<div class="container">
+	<div data-scroll-reveal class="container">
 		<div class="portfolio" id="portfolio">
 			<div class="portfolio-display"></div>
 		</div>
 	</div>
-	<div class="container-fluid">
+	<div data-scroll-reveal class="container-fluid">
 		<div class="photography" id="photography">
 			<div class="photography-display"></div>
 		</div>
@@ -116,7 +116,7 @@
 
 	<script type="text/template" class="portfolio-template">
 			<div class="col-sm-6 col-md-6">
-				<div class="thumbnail">
+				<div data-scroll-reveal='reset' class="thumbnail">
 					<div class="img portfolio-thumnail <%= thumbnail %>"></div>
 					<div class="caption under-portfolio">
 						<h3><%= name %></h3>
@@ -196,6 +196,7 @@
 	<script src="bower_components/backbone/backbone.js"></script>
 	<script src="bower_components/paper/dist/paper-full.js"></script>
 	<script src="bower_components/FitVids/jquery.fitvids.js"></script>
+	<script src="bower_components/scrollReveal.js/scrollReveal.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -233,7 +234,5 @@
 		<script src="scripts/router.js"></script>
 		<script src="scripts/main.js"></script>
 		<!-- endbuild -->
-
-
 </body>
 </html>

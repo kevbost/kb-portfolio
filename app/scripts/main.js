@@ -13,6 +13,17 @@ window.onload = function() {
 	paper.setup('myCanvas');
     // Target your .container, .wrapper, .post, etc.
     $(".container").fitVids();
+    var config = {
+    	after: '0s',
+		enter: 'bottom',
+		move: '50px',
+		over: '0.5s',
+		easing: 'ease-in-out',
+		reset: true,
+		init: false,
+		viewportFactor: 0
+	};
+    window.scrollReveal = new scrollReveal( config );
 };
 
 $('.navlink').click(function(){

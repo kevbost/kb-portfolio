@@ -23,6 +23,7 @@ var PortfolioView = Backbone.View.extend({
 			if( $('.label-primary').is(':empty') ) {
 				$('.label-primary:empty').css('background-color','transparent')
 			}
+			scrollReveal.init();
 		}, 50);
 	},
 
