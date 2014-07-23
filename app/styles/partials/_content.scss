@@ -22,6 +22,12 @@ $brand-blue-darker:		#2E3F44;
 $brand-blue-saturated:	#536091;
 $brand-blue-orange:		#424B6B;
 
+$brand-yellow-lighter:	#EAE490;
+$brand-yellow-light:	#EBE37F;
+$brand-yellow:			#EAE054;
+$brand-yellow-dark:		#D3BB41;
+$brand-yellow-darker:	#B9A439;
+
 // TRIAD SPENCE
 // $brand-one: 			#484340;
 // $brand-two:				#946C52;
@@ -138,7 +144,9 @@ img {
 		height: 10px;
 		width: 100%;
 		// background-color: lighten($brand-two, 20%);
+		// background-color: $brand-blue;
 		background-color: $brand-blue;
+		// border: 2px solid $brand-yellow;
 		// background-image: url("../images/arrow-down-min.png");
 		background-repeat: repeat-x;
 		cursor: pointer;
@@ -238,57 +246,47 @@ img {
 }
 // ==================================================
 .top-bg {
-	background: url('../images/cyan-left.jpg') no-repeat left 0px top,
-				url('../images/cyan-right.jpg') no-repeat right 0px top,
-				url('../images/cyan-repeat.jpg') repeat-x;
-	background-size: contain,
-					contain,
-					contain;
-
-	// background-size: 
-	// background-color: $gray-light;
-	// background-repeat: repeat;
-	// background-image: url('../images/tile-test.png');
-	// background-position: -150px;
-	// background-origin: content-box;
-	// background-image: url('../images/cyanotype-edit-repeat.png');
-
 	margin-top: -30px;
 	position: relative;
 	z-index: 1;
+	background: url('../images/cyan-left.jpg') no-repeat left 0px top,
+				url('../images/cyan-right.jpg') no-repeat right 0px top,
+				url('../images/cyan-repeat.jpg') repeat-x;
+				// background-attachment: fixed;
+				background-size:	contain,
+									contain,
+									contain;
 	.top {
-		// height: 400px;
 		.top-display {
 			min-height: 100vh;
-			// padding-top: 20px;
-			// background-color: lighten($gray-darker, 10%)
 			.top-intro {
-				// position: absolute;
 				background-color: $brand-blue;
 				box-shadow: 0px 0px 0px 10px $brand-blue-lighter;
-				// width: 50%;
 				height: 50vh;
-				// margin-left: 25vw;
-				// margin-right: 25vw;
 				margin-top: 22vh;
 			}
 		}
 	}
 }
 // ==================================================
-.about {
-	// height: 400px;
-	.about-display {
-		padding-top: 20px;
-		min-height: 100vh;
-		// background-color: lighten($gray-darker, 20%)
+.about-bg {
+	padding: 0;
+	.about {
+		// height: 400px;
+		.about-display {
+			padding-top: 25px;
+			min-height: 100vh;
+			background-color: $brand-blue-darker;
+			border-top: 40px solid $brand-yellow;
+			border-bottom: 20px solid $brand-yellow;
+		}
 	}
 }
 // ==================================================
 .portfolio {
 	// background-color: white;
 	.portfolio-display {
-		padding-top: 20px;
+		padding-top: 40px;
 		display: inline-block;
 		height: auto;
 		// background-color: orange;
