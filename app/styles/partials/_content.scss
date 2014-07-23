@@ -272,19 +272,28 @@ img {
 .about-bg {
 	padding: 0;
 	.about {
-		// height: 400px;
+		height: 20vh;
+		background-color: $brand-blue;
+	}
 		.about-display {
 			padding-top: 25px;
 			min-height: 100vh;
 			background-color: $brand-blue-darker;
-			border-top: 40px solid $brand-yellow;
-			border-bottom: 20px solid $brand-yellow;
+			// border-top: 200px solid $brand-yellow;
+			// border-bottom: 20px solid $brand-yellow;
 		}
-	}
 }
 // ==================================================
-.portfolio {
-	// background-color: white;
+.portfolio-bg {
+	padding: 0;
+	// padding-top: 20vh;
+	// border-top: 20vh solid $brand-blue;
+	// box-shadow: inset 0 20vh 0 0 $brand-blue;
+	.portfolio {
+		height: 20vh;
+		background-color: $brand-blue;
+		margin-bottom: 40px;
+	}
 	.portfolio-display {
 		padding-top: 40px;
 		display: inline-block;
@@ -324,11 +333,18 @@ img {
 		}
 }
 // ==================================================
-.photography {
-	// height: 400px;
-	.photography-display {
-		padding-top: 20px;
-		min-height: 100vh;
+.contact-bg {
+	padding: 0;
+	// border-top: 200px solid $brand-yellow;
+	background-color: $brand-yellow-dark;
+	.contact {
+		height: 20vh;
+		background-color: $brand-yellow-light;
+	}
+	.contact-display {
+		// box-shadow: inset 0 20vh 0 0 $brand-yellow;
+		// padding-top: 20px;
+		min-height: 80vh;
 		// background-color: lighten($gray-darker, 20%)
 	}
 }

@@ -358,7 +358,7 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function (target) {
+  grunt.registerTask('go', 'start the server and preview your app, --allow-remote for remote access', function (target) {
     if (grunt.option('allow-remote')) {
       grunt.config.set('connect.options.hostname', '0.0.0.0');
     }
@@ -377,8 +377,8 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('server', function (target) {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run([target ? ('serve:' + target) : 'serve']);
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt go` to start a server.');
+    grunt.task.run([target ? ('go:' + target) : 'go']);
   });
 
   grunt.registerTask('test', function (target) {
