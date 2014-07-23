@@ -1,6 +1,6 @@
 "use strict";
 
-var AppRouter = Backbone.Router.extend({
+var AppRouter = Parse.Router.extend({
 	
 	routes: {
 		"": 			"home",

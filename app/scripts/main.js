@@ -7,7 +7,8 @@ var appView;
 var portfolios = new PortfolioCollection();
 var app = new AppRouter();
 
-Backbone.history.start();
+Parse.history.start();
+// Backbone.history.start();
 
 window.onload = function() {
 	paper.setup('myCanvas');
