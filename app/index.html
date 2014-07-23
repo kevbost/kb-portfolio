@@ -31,15 +31,15 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a data-scroll-nav="0" class="navbar-brand" href="#top">KEVINBOST</a>
+			<a data-scroll-nav="0" class="navbar-brand tk-droid-sans-mono" href="#top">kevinbost</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+		<div class="collapse navbar-collapse tk-droid-sans-mono" id="navbar-collapse-1">
 			<ul class="nav navbar-nav" id="top">
 			<!-- <li class="portfolio navlink"><a href="#">PORTFOLIO</a></li> -->
- 			<li data-scroll-nav="1" class="about-link navlink"><a href="#about">ABOUT</a></li>
-			<li data-scroll-nav="2" class="portfolio-link navlink"><a href="#portfolio">PORTFOLIO</a></li>
-			<li data-scroll-nav="3" class="photography-link navlink"><a href="#photography">PHOTOGRAPHY</a></li>
+ 			<li data-scroll-nav="1" class="about-link navlink"><a href="#about">about</a></li>
+			<li data-scroll-nav="2" class="portfolio-link navlink"><a href="#portfolio">portfolio</a></li>
+			<li data-scroll-nav="3" class="photography-link navlink"><a href="#photography">photography</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
@@ -58,12 +58,12 @@
 		<div class="navbar-header">
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="persistent-collapse">
+		<div class="persistent-collapse tk-droid-sans-mono">
 			<ul class="nav navbar-nav">
-				<li data-scroll-nav="0" class="top-link navlink"><a href="#top">TOP</a></li>
-				<li data-scroll-nav="1" class="about-link navlink"><a href="#about">ABOUT</a></li>
-				<li data-scroll-nav="2" class="portfolio-link navlink"><a href="#portfolio">PORTFOLIO</a></li>
-				<li data-scroll-nav="3" class="photography-link navlink"><a href="#photography">PHOTOGRAPHY</a></li>
+				<li data-scroll-nav="0" class="top-link navlink"><a href="#top">top</a></li>
+				<li data-scroll-nav="1" class="about-link navlink"><a href="#about">about</a></li>
+				<li data-scroll-nav="2" class="portfolio-link navlink"><a href="#portfolio">portfolio</a></li>
+				<li data-scroll-nav="3" class="photography-link navlink"><a href="#photography">photography</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -72,24 +72,38 @@
 <!-- /peristent nav -->
 
 <!-- under nav -->
-	<div class="container">
+	<div class="container-fluid">
 		<div class="under-nav-container">
-			<div class="under-nav-toggle">
-			</div>
+			<div class="under-nav-toggle"></div>
 			<div class="under-toggle">
-				<div class="under-nav"></div>
+				<div class="under-nav">
+					<div class="myCanvas-container">
+						<canvas id="myCanvas" width="500"></canvas>
+						<script type="text/paperscript" canvas="myCanvas">
+							function onFrame(){for(var b=0;count>b;b++){var c=project.activeLayer.children[b];c.position.x+=c.bounds.width/20,c.bounds.left>view.size.width&&(c.position.x=-c.bounds.width)}}for(var count=150,path=new Path.Circle({center:[0,0],radius:10,fillColor:"white",strokeColor:"black"}),symbol=new Symbol(path),i=0;count>i;i++){var center=Point.random()*view.size,placedSymbol=symbol.place(center);placedSymbol.scale(i/count)}
+						</script>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 <!-- /under nav -->
 
+
 <!-- main -->
 	<div data-scroll-reveal data-scroll-index="0" class="container-fluid top-bg">
 		<div class="top">
 			<div class="top-display">
-				<div class="container">x
-					<div class="top-intro"></div>
-				</div>
+				<!-- <div class="container"> -->
+					<div class="top-intro">
+						<h1 class="fit-text-name tk-bd-jupiter">
+							KEVIN BOST
+						</h1>
+						<h2 class="fit-text-title tk-bd-jupiter">
+							Front-End Web Developer
+						</h2>
+					</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
@@ -113,11 +127,11 @@
 <!-- /main -->
 
 <!-- paper js canvas -->
-	<div id="background-canvas" style="position:fixed; top:0; left:0; bottom:0; z-index:-1">
+	<!-- <div id="background-canvas" style="position:fixed; top:0; left:0; bottom:0; z-index:-1">
 		<canvas id="myCanvas" resize></canvas>
 		<script type="text/paperscript" canvas="myCanvas">
 		</script>
-	</div>
+	</div> -->
 <!-- /paper js canvas -->
 
 
@@ -210,6 +224,9 @@
 
 	<script src="//www.parsecdn.com/js/parse-1.2.19.min.js"></script>
 
+	<script type="text/javascript" src="//use.typekit.net/vlk4vyj.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
 		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -237,10 +254,17 @@
 
 
 		<!-- build:js({app,.tmp}) scripts/main.js -->
+		<script src="scripts/jquery.fittext.js"></script>
 		<script src="scripts/model-collections.js"></script>
 		<script src="scripts/app-view.js"></script>
 		<script src="scripts/router.js"></script>
 		<script src="scripts/main.js"></script>
 		<!-- endbuild -->
+
+		<script>
+		  // jQuery(".fit-text").fitText(.8);
+		  // jQuery(".title").fitText(.4);
+		</script>
+
 </body>
 </html>

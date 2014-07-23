@@ -9,6 +9,7 @@ var app = new AppRouter();
 
 Parse.history.start();
 // Backbone.history.start();
+	paper.install(window);
 
 window.onload = function() {
 	paper.setup('myCanvas');
@@ -34,13 +35,9 @@ window.onload = function() {
 		onPageChange: null,    // function(pageIndex) that is called when page is changed
 		topOffset: 0         // offste (in px) for fixed top navigation
 	})
+
 };
 
-// if ($('.persistent-collapse').click()) {
-// 	setTimeout(function(){
-// 		$('.navbar-toggle').addClass('collapsed');
-// 	}, 50)
-// }
 
 $('.navbar-nav').click(function(){
 	$('.navbar-collapse').removeClass('in');
@@ -50,7 +47,7 @@ $('.navlink').click(function(){
 	$('.navbar-collapse').removeClass('in');
 })
 
-$( ".under-nav-toggle, .open-icon, .close-icon" ).click(function() {
+$( ".under-nav-toggle" ).click(function() {
 	$( ".under-toggle").slideToggle( "slow" ).toggleClass('active');
 });
 
@@ -62,9 +59,5 @@ $(window).scroll( function() {
 		$('.persistent-navbar').fadeIn(500).css('display','inherit')
 	}
 });
-
-// setInterval(function(){
-// 	if ($('.under-toggle').hasClass('active')) {
-// 		console.log('yeh boi')
-// 	}
-// }, 2000)
+	$('.fit-text-name').fitText(0.5);
+	$('.fit-text-title').fitText(3);

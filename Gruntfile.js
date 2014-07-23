@@ -377,7 +377,12 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('server', function (target) {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt go` to start a server.');
+    grunt.log.warn('I changed the `server` task to `go`, because why not. Use `grunt go` to start a server.');
+    grunt.task.run([target ? ('go:' + target) : 'go']);
+  });
+
+  grunt.registerTask('serve', function (target) {
+    grunt.log.warn('I changed the `serve` task to `go`, because why not. Use `grunt go` to start a server.');
     grunt.task.run([target ? ('go:' + target) : 'go']);
   });
 

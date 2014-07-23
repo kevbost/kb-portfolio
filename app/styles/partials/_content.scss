@@ -78,6 +78,14 @@ img {
 	max-width:100%;
 }
 
+.tk-droid-sans-mono {
+	font-family: "droid-sans-mono",sans-serif;
+}
+
+.tk-bd-jupiter {
+	font-family: "bd-jupiter",sans-serif;
+}
+
 .navbar {
 	background-color: $brand-blue-dark;
 	border-radius: 0;
@@ -160,7 +168,7 @@ img {
 		margin-bottom: 40px;
 		.under-nav {
 			height: 150px;
-			width: 90%;
+			max-width: 500px;
 			margin-left: 10px;
 			// background-color: lighten($brand-two, 30%);
 			background-color: darken($brand-blue-lighter, 0%);
@@ -172,13 +180,13 @@ img {
 }
 
 // ==================================================
-#myCanvas {
-	// width: 100%;
-	// height: 100%;
-	// background-color: black;
-	// position: absolute;
-	// top: 0;
-	// z-index: -1;
+.myCanvas-container	{
+	background-color: red;
+	max-width: 500px;
+	height: 150px;
+	#myCanvas {
+		background-color: darken($brand-yellow-lighter, 0%);
+	}
 }
 // ==================================================
 .persistent-navbar, .persistent-collapse {
@@ -260,10 +268,64 @@ img {
 		.top-display {
 			min-height: 100vh;
 			.top-intro {
-				background-color: $brand-blue;
-				box-shadow: 0px 0px 0px 10px $brand-blue-lighter;
-				height: 50vh;
-				margin-top: 22vh;
+				// background-color: $brand-blue;
+				// box-shadow: 0px 0px 0px 10px $brand-blue-light;
+				// height: 50vh;
+				margin-top: 25vh;
+				width: 100%;
+				.fit-text-name {
+					text-align: center;
+						// text-align: center;
+						// font: 400 4.5em/1.1 Bevan, sans-serif;
+						text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1);
+						text-transform: capitalize;
+						letter-spacing: -.23em;
+						
+						// // // Deep light shadow
+						// // letter-spacing: .04em;
+						// color: $brand-blue;
+						// text-shadow: 
+						// 0px 0px 0 #FCFDFE,
+						// -1px 2px 1px #F9FCFD,
+						// -2px 4px 1px #F7FBFC,
+						// -3px 6px 1px #F4FAFC,
+						// -4px 8px 1px #F1F9FB,
+						// -5px 10px 1px #EFF7FA,
+						// -6px 12px 1px #ECF6FA,
+						// -7px 14px 1px #EAF5F9,
+						// -8px 16px 1px #E7F4F8,
+						// -9px 18px 1px #E4F3F8,
+						// -10px 20px 1px #E2F2F7,
+						// -11px 22px 1px #DFF0F6,
+						// -12px 24px 1px #DCEFF6,
+						// -13px 26px 1px #DAEEF5,
+						// -14px 28px 1px #D7EDF4,
+						// -15px 30px 1px #D5ECF3,
+						// -16px 32px 1px #D2EBF3,
+						// -17px 34px 1px #CFE9F2,
+						// -18px 36px 1px #CDE8F1,
+						// -19px 38px 1px #CAE7F1,
+						// -20px 40px 1px #C7E6F0,
+						// -21px 42px 1px #C5E5EF,
+						// -22px 44px 1px #C2E4EF,
+						// -23px 46px 1px #C0E2EE,
+						// -24px 48px 1px #BDE1ED,
+						// -25px 50px 1px #BAE0ED,
+						// -26px 52px 1px #B8DFEC,
+						// -27px 54px 1px #B5DEEB,
+						// -28px 56px 1px #B3DDEB;
+
+						// // Inset Shadow
+						color: $brand-blue-light;
+						// letter-spacing: .03em;
+						text-shadow: 
+						-1px -1px 1px $brand-blue-lighter, 
+						2px 2px 1px $brand-blue;
+
+				}
+				.fit-text-title {
+					text-align: center;
+				}
 			}
 		}
 	}
