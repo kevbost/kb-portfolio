@@ -9,8 +9,7 @@
     "paper": "~0.9.18",
     "FitVids": "~1.1.0",
     "scrollReveal.js": "~0.1.3",
-    "ScrollIt": "*",
-    "monosocialiconsfont": "*"
+    "ScrollIt": "*"
   },
   "devDependencies": {}
 }
