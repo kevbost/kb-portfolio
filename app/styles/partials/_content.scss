@@ -424,10 +424,13 @@ img {
 		bottom: 0;
 		right: 0;
 		margin-right: 5px;
-		margin-bottom: 8px;
+		margin-bottom: -8px;
 		}
 		.label {
 			font-size: 2em;
+		}
+		.label-warning {
+			background-color: $brand-blue-saturated;
 		}
 }
 // ==================================================
@@ -482,38 +485,28 @@ img {
 
 // ==================================================
 
-@mixin asset-label {
-	background-color: green;
-}
-
 .assets-container {
 	width: 100%;
 	// height: 100px;
-	// position: absolute;
-	// bottom: 0;
-	// right: 0;
-	// left: 0;
+	position: relative;
+	text-align: center;
+	bottom: 0;
+	right: 0;
+	left: 0;
 	// background-color: red;
 	.assets {
-		// float: left;
-		font-size: 3em;
-		.label {
-			display: inline-block;
-			@include asset-label;
-		}
-		.label-primary {
-			background-color: $brand-info;
-			margin-top: 5px;
-			// border-radius: 0;
-			// color: black;
-			// margin-right: -5px;
-			// border-bottom: 4px solid darken($brand-info, 10%);
-			// border-right: 3px solid $gray-lighter;
-			// border-left: 8px solid lighten($brand-info, 20%);
-			&:hover {
-				// border-left: 6px solid lighten($brand-info, 20%);
-				// margin-right: 2px;
-			}
+		// text-align: cen;
+		font-size: 2em;
+		margin-top: 10px;
+		// display: inline;
+		.asset-label {
+			padding: 5px;
+			line-height: 30px;
+			// background-color: $brand-blue-light;
+			// display: inline-block;
+			color: $brand-blue;
+			// background-color: green;
+			// margin: 0px 5px 5px 5px
 		}
 	}
 }
@@ -521,6 +514,9 @@ img {
 	// min-height: 191px;
 	@media screen and (min-width: $screen-sm-min) {
 		min-height: 191px;
+		p {
+			min-height: 115px;
+		}
 	}
 	margin-top: 20px;
 	h3 {

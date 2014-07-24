@@ -132,7 +132,6 @@
 			</div>
 		</div>
 	</div>
-<!-- This site is rendered using static data from a custom Etsy API query.  Each object renders with a category and a link to the product on Etsy. Then it picks out each items base color and makes a new box displaying each images color. -->
 
 	<div data-scroll-reveal data-scroll-index="1" class="container-fluid about-bg">
 		<div class="about" id="about"></div>
@@ -171,18 +170,29 @@
 	<script type="text/template" class="portfolio-template">
 			<div class="col-sm-6 col-md-6">
 				<div data-scroll-reveal='reset' class="thumbnail">
-					<div class="img portfolio-thumnail <%= thumbnail %>"></div>
+					<div class="img portfolio-thumnail <%= thumbnail %>">
+						<div class="link-out">
+							<a href="<%= ghpages %>" target="_blank">
+								<span class="label label-warning">Demo</span>
+							</a>
+							<a href="<%= source %>" target="_blank">	
+								<span class="label label-warning">View On Github</span>
+							</a>
+						</div>
+					</div>
 					<div class="caption under-portfolio">
 						<h3><%= name %></h3>
 						<p><%= copy %></p>
 						<div class="assets-container">
 							<div class="assets">
-								<span class="label label-primary"><%=asset1%></span>
-								<span class="label label-primary"><%=asset2%></span>
-								<span class="label label-primary"><%=asset3%></span>
-								<span class="label label-primary"><%=asset4%></span>
-								<span class="label label-primary"><%=asset5%></span>
-								<span class="label label-primary"><%=asset6%></span>
+								<span class="asset-label"><%=asset1%></span>
+								<span class="asset-label"><%=asset2%></span>
+
+								<span class="asset-label"><%=asset3%></span>
+								<span class="asset-label"><%=asset4%></span>
+
+								<span class="asset-label"><%=asset5%></span>
+								<span class="asset-label"><%=asset6%></span>
 							</div>
 						</div>
 					</div>
