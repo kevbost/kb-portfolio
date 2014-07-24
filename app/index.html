@@ -98,28 +98,41 @@
 							Front-End Web Developer
 						</h2>
 						<div class="top-link-out">
-							<a href="mailto:kevbost@gmail.com?subject=Hey, I found your portfolio website!">
-								<i class="fa fa-envelope-square"></i>
-							</a>
-							<a href="https://twitter.com/kevinbost">
-								<i class="fa fa-twitter-square"></i>
-							</a>
-							<a href="http://instagram.com/kevbost">
-								<i class="fa fa-instagram"></i>
-							</a>
-							<a href="http://www.linkedin.com/in/kevinbost">
-								<i class="fa fa-linkedin-square"></i>
-							</a>
-							<a href="https://github.com/kevbost">
-								<i class="fa fa-github-square"></i>
-							</a>
-							
+
+							<span class="top-link-out-span">
+								<a href="https://twitter.com/kevinbost">
+									<i class="fa fa-twitter-square"></i>
+								</a>
+							</span>
+
+							<span class="top-link-out-span">
+								<a href="http://instagram.com/kevbost">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</span>
+
+							<span class="top-link-out-span">
+								<a href="http://www.linkedin.com/in/kevinbost">
+									<i class="fa fa-linkedin-square"></i>
+								</a>
+							</span>
+
+							<span class="top-link-out-span">
+								<a href="https://github.com/kevbost">
+									<i class="fa fa-github-square"></i>
+								</a>
+							</span>
+
+						</div>
+						<div class="top-contact tk-bd-jupiter">
+							<span>kevbost@gmail.com</span>
 						</div>
 					</div>
 				<!-- </div> -->
 			</div>
 		</div>
 	</div>
+<!-- This site is rendered using static data from a custom Etsy API query.  Each object renders with a category and a link to the product on Etsy. Then it picks out each items base color and makes a new box displaying each images color. -->
 
 	<div data-scroll-reveal data-scroll-index="1" class="container-fluid about-bg">
 		<div class="about" id="about"></div>
@@ -162,13 +175,15 @@
 					<div class="caption under-portfolio">
 						<h3><%= name %></h3>
 						<p><%= copy %></p>
-						<div class="assets">
-							<span class="label label-primary"><%=asset1%></span>
-							<span class="label label-primary"><%=asset2%></span>
-							<span class="label label-primary"><%=asset3%></span>
-							<span class="label label-primary"><%=asset4%></span>
-							<span class="label label-primary"><%=asset5%></span>
-							<span class="label label-primary"><%=asset6%></span>
+						<div class="assets-container">
+							<div class="assets">
+								<span class="label label-primary"><%=asset1%></span>
+								<span class="label label-primary"><%=asset2%></span>
+								<span class="label label-primary"><%=asset3%></span>
+								<span class="label label-primary"><%=asset4%></span>
+								<span class="label label-primary"><%=asset5%></span>
+								<span class="label label-primary"><%=asset6%></span>
+							</div>
 						</div>
 					</div>
 				</div>

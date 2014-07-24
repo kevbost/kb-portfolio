@@ -59,7 +59,11 @@ $(window).scroll( function() {
 		$('.persistent-navbar').fadeIn(500).css('display','inherit')
 	}
 });
-	$('.fit-text-name').fitText(0.5);
-	$('.fit-text-title').fitText(3);
-	$('.top-link-out').fitText(0.5);
+	$('.fit-text-name').fitText(0.8, { minFontSize: '50px', maxFontSize: '100px' });
+	$('.fit-text-title').fitText(2, { minFontSize: '20px', maxFontSize: '40px' });
+	$('.top-link-out').fitText(1, { minFontSize: '40px', maxFontSize: '80px' });
+	$('.top-contact').fitText(3, { minFontSize: '15px', maxFontSize: '30px' });
 	$('.fit-text').fitText();
+
+	// $('.assets').fitText(5);
+
