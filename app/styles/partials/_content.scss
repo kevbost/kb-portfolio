@@ -181,11 +181,11 @@ img {
 
 // ==================================================
 .myCanvas-container	{
-	background-color: red;
-	max-width: 500px;
-	height: 150px;
+	// background-color: red;
+	// max-width: 500px;
+	// height: 150px;
 	#myCanvas {
-		background-color: darken($brand-yellow-lighter, 0%);
+		// background-color: darken($brand-yellow-lighter, 0%);
 	}
 }
 // ==================================================
@@ -274,15 +274,18 @@ img {
 				margin-top: 25vh;
 				width: 100%;
 				.fit-text-name {
+					// margin-bottom: 40px;
+					line-height: 0.7em;
+					// margin-bottom: 1em;
 					text-align: center;
 						// text-align: center;
 						// font: 400 4.5em/1.1 Bevan, sans-serif;
 						text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1);
 						text-transform: capitalize;
-						letter-spacing: -.23em;
 						
 						// // // Deep light shadow
 						// // letter-spacing: .04em;
+						letter-spacing: -.23em;
 						// color: $brand-blue;
 						// text-shadow: 
 						// 0px 0px 0 #FCFDFE,
@@ -315,16 +318,24 @@ img {
 						// -27px 54px 1px #B5DEEB,
 						// -28px 56px 1px #B3DDEB;
 
-						// // Inset Shadow
-						color: $brand-blue-light;
-						// letter-spacing: .03em;
-						text-shadow: 
-						-1px -1px 1px $brand-blue-lighter, 
-						2px 2px 1px $brand-blue;
+						// // // Inset Shadow
+						// color: $brand-blue-light;
+						// // letter-spacing: .03em;
+						// text-shadow: 
+						// -1px -1px 1px $brand-blue-lighter, 
+						// 2px 2px 1px $brand-blue;
+				} // minimize
 
-				}
 				.fit-text-title {
 					text-align: center;
+					line-height: 2em;
+					color: $brand-blue-darker;
+				}
+				.top-link-out {
+					text-align: center;
+					color: $brand-blue-darker;
+					line-height: .7em;
+					// background-color: black;
 				}
 			}
 		}
@@ -478,4 +489,40 @@ img {
 	}
 }
 
+.typekit-badge {
+	display: none !important;
+}
+
+// ==================================================
+// @font-face {
+//     font-family: 'Mono Social Icons Font';
+//     src: url('MonoSocialIconsFont-1.10.eot');
+//     src: url('MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+//          url('MonoSocialIconsFont-1.10.woff') format('woff'),
+//          url('MonoSocialIconsFont-1.10.ttf') format('truetype'),
+//          url('MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+//     src: url('MonoSocialIconsFont-1.10.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// .symbol, a.symbol:before {
+//     font-family: 'Mono Social Icons Font';
+//     -webkit-text-rendering: optimizeLegibility;
+//     -moz-text-rendering: optimizeLegibility;
+//     -ms-text-rendering: optimizeLegibility;
+//     -o-text-rendering: optimizeLegibility;
+//     text-rendering: optimizeLegibility;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-font-smoothing: antialiased;
+//     -ms-font-smoothing: antialiased;
+//     -o-font-smoothing: antialiased;
+//     font-smoothing: antialiased;
+// }
+
+// a.symbol:before {
+//     content: attr(title);
+//     margin-right: 0.3em;
+//     font-size: 130%;
+// }
 // ==================================================

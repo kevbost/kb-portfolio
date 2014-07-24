@@ -12,7 +12,7 @@ Parse.history.start();
 	paper.install(window);
 
 window.onload = function() {
-	paper.setup('myCanvas');
+	// paper.setup('myCanvas');
 	// Target your .container, .wrapper, .post, etc.
 	$(".container").fitVids();
 	var config = {
@@ -61,3 +61,5 @@ $(window).scroll( function() {
 });
 	$('.fit-text-name').fitText(0.5);
 	$('.fit-text-title').fitText(3);
+	$('.top-link-out').fitText(0.5);
+	$('.fit-text').fitText();

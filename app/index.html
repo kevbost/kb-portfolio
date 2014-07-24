@@ -9,6 +9,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<!-- build:css(.) styles/vendor.css -->
 	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/monosocialiconsfont/monosocialiconsfont.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css(.tmp) styles/main.css -->
@@ -77,12 +78,6 @@
 			<div class="under-nav-toggle"></div>
 			<div class="under-toggle">
 				<div class="under-nav">
-					<div class="myCanvas-container">
-						<canvas id="myCanvas" width="500"></canvas>
-						<script type="text/paperscript" canvas="myCanvas">
-							function onFrame(){for(var b=0;count>b;b++){var c=project.activeLayer.children[b];c.position.x+=c.bounds.width/20,c.bounds.left>view.size.width&&(c.position.x=-c.bounds.width)}}for(var count=150,path=new Path.Circle({center:[0,0],radius:10,fillColor:"white",strokeColor:"black"}),symbol=new Symbol(path),i=0;count>i;i++){var center=Point.random()*view.size,placedSymbol=symbol.place(center);placedSymbol.scale(i/count)}
-						</script>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -102,6 +97,12 @@
 						<h2 class="fit-text-title tk-bd-jupiter">
 							Front-End Web Developer
 						</h2>
+						<div class="top-link-out">
+							<span class='symbol'>githubalt</span>
+							<span class='symbol'>twitterbird</span>
+							<span class='symbol'>linkedin</span>
+							<span class='symbol'>instagram</span>
+						</div>
 					</div>
 				<!-- </div> -->
 			</div>
@@ -131,7 +132,14 @@
 		<canvas id="myCanvas" resize></canvas>
 		<script type="text/paperscript" canvas="myCanvas">
 		</script>
+	</div> 
+
+	<div class="myCanvas-container">
+		<canvas id="myCanvas" height="150" width="500"></canvas>
+		<script type="text/paperscript" canvas="myCanvas">
+		</script>
 	</div> -->
+
 <!-- /paper js canvas -->
 
 
