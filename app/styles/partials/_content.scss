@@ -1,64 +1,13 @@
-$brand-primary:         #428bca !default;
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-warning-lighter: lighten(#f0ad4e, 50%) !default;
-$brand-danger:          #d9534f !default;
-
-// SUBTLE TEA TIME
-$brand-one: 			#5E3635;
-$brand-two:				#5F4F35;
-$brand-three:			#616B4E;
-$brand-four:			#568562;
-$brand-five:			#40997B;
-
-// BRAND BLUE
-$brand-blue-lighter:	#DCF6FF;
-$brand-blue-light:		#B3DDEB;
-$brand-blue:			#69919E;
-$brand-blue-dark:		#3F565E;
-$brand-blue-darker:		#2E3F44;
-
-$brand-blue-saturated:	#536091;
-$brand-blue-orange:		#424B6B;
-
-$brand-yellow-lighter:	#EAE490;
-$brand-yellow-light:	#EBE37F;
-$brand-yellow:			#EAE054;
-$brand-yellow-dark:		#D3BB41;
-$brand-yellow-darker:	#B9A439;
-
-// TRIAD SPENCE
-// $brand-one: 			#484340;
-// $brand-two:				#946C52;
-// $brand-three:			#455543;
-// $brand-four:			#64627B;
-// $brand-five:			#807D94;
-
-// MONOCHROME
-// $brand-one: 			#ECEBEB; // light white
-// $brand-two:				#A09E9E; // light grey
-// $brand-three:			#666363; // middle grey
-// $brand-four:			#413D3D; // dark middle grey
-// $brand-five:			#2B2B2B; // dark grey
-
 body {
-	font-size: 62.5%;
-	// padding-top: 60px;
+	font-size: $font-size-base;
 	padding-bottom: 0px;
-	// background-color: $brand-one;
 	background-color: $gray-darker;
-	color: darken($brand-one, 0%);
 	position: relative;
-	// background-image: url('http://subtlepatterns.com/patterns/tex2res4.png');
-	// background-image: url('http://subtlepatterns.com/patterns/noisy.png');
-	// background-image: url('http://subtlepatterns.com/patterns/old_mathematics.png');
 }
 
 a {
 	color: #333333;
 	text-decoration: none;
-
 	&:hover,
 	&:focus {
 		color: yellow;
@@ -71,27 +20,20 @@ a {
 }
 
 h1{
-	color: white;
+	// color: white;
 }
 
 img {
 	max-width:100%;
 }
 
-.tk-droid-sans-mono {
-	font-family: "droid-sans-mono",sans-serif;
-}
-
-.tk-bd-jupiter {
-	font-family: "bd-jupiter",sans-serif;
-}
-
 .navbar {
 	background-color: $brand-blue-dark;
+	font-family: "droid-sans-mono",sans-serif;
 	border-radius: 0;
 	z-index: 4;
 	.navbar-nav {
-		font-size: 2em;
+		font-size: 1.4em;
 		color: $brand-blue-lighter;
 		&:hover {
 			color: $brand-blue-lighter;
@@ -151,11 +93,7 @@ img {
 		margin: 0 auto;
 		height: 10px;
 		width: 100%;
-		// background-color: lighten($brand-two, 20%);
-		// background-color: $brand-blue;
 		background-color: $brand-blue;
-		// border: 2px solid $brand-yellow;
-		// background-image: url("../images/arrow-down-min.png");
 		background-repeat: repeat-x;
 		cursor: pointer;
 	}
@@ -190,9 +128,10 @@ img {
 }
 // ==================================================
 .persistent-navbar, .persistent-collapse {
+	font-family: "droid-sans-mono",sans-serif;
 	z-index: 1;
-	// background-color: orange;
 	max-height: 25px;
+	overflow: hidden;
 		.nav{
 			margin: 0;
 		li{
@@ -230,28 +169,6 @@ img {
 	// margin-top: -30px;
 }
 
-.jumbotron {
-	// background-image: url('http://subtlepatterns.com/patterns/old_wall.png');
-	background-color: lighten($brand-four, 50%);
-	border-radius: 0 !important;
-	@media screen and (min-width: $screen-sm-min) {
-		padding-top:    ($jumbotron-padding / 2);
-		padding-bottom: ($jumbotron-padding * 1);
-
-		.container & {
-			padding-left:  ($jumbotron-padding * 1);
-			padding-right: ($jumbotron-padding * 1);
-			}
-		h1 {
-			font-size: ($font-size-base * 4.5);
-			}
-		h2 {
-			margin: 0;
-			margin-bottom: 0.15em;
-			font-size: ($font-size-base * 4);
-		}
-	}
-}
 // ==================================================
 .top-bg {
 	margin-top: -30px;
@@ -268,39 +185,18 @@ img {
 		.top-display {
 			// min-height: 100vh;
 			.top-intro {
-				// background-color: $brand-blue;
-				// box-shadow: 0px 0px 0px 10px $brand-blue-light;
-				// height: 50vh;
 				margin-top: 200px;
 				margin-bottom: 200px;
 				width: 100%;
 				.fit-text-name {
+					font-family: $headings-font-kb;
 					line-height: 0.7em;
 					text-align: center;
+					text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-					// margin-bottom: 40px;
-					// margin-bottom: 1em;
-						// text-align: center;
-						// font: 400 4.5em/1.1 Bevan, sans-serif;
-						// text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1);
-						// text-transform: capitalize;
-						
 						// // // Deep light shadow
-						// // letter-spacing: .04em;
-						// letter-spacing: -.23em;
-						// color: $brand-blue;
+						// letter-spacing: -.15em;
+						// color: white;
 						// text-shadow: 
 						// 0px 0px 0 #FCFDFE,
 						// -1px 2px 1px #F9FCFD,
@@ -341,6 +237,7 @@ img {
 				} // minimize
 
 				.fit-text-title {
+					font-family: $headings-font-kb;
 					text-align: center;
 					line-height: 2em;
 					color: $brand-blue-darker;
@@ -357,6 +254,7 @@ img {
 					}
 				}
 				.top-contact {
+					font-family: $headings-font-kb;
 					text-align: center;
 					font-size: 2em;
 					margin-top: 1em;
@@ -369,36 +267,99 @@ img {
 // ==================================================
 .about-bg {
 	padding: 0;
-	.about {
-		height: 20vh;
-		background-color: $brand-blue;
+	background-color: $brand-blue-darker;
+	.about-title {
+		font-family: $headings-font-kb;
+		padding: 20px;
+		margin-top: 0;
+		font-size: 20em;
+		text-align: center;
 	}
-		.about-display {
-			padding-top: 25px;
-			min-height: 100vh;
-			background-color: $brand-blue-darker;
-			// border-top: 200px solid $brand-yellow;
-			// border-bottom: 20px solid $brand-yellow;
-		}
+	.about-display {
+		padding-top: 25px;
+		min-height: 100vh;
+		// border-top: 200px solid $brand-yellow;
+		// border-bottom: 20px solid $brand-yellow;
+	}
 }
 // ==================================================
 .portfolio-bg {
 	padding: 0;
-	// padding-top: 20vh;
-	// border-top: 20vh solid $brand-blue;
-	// box-shadow: inset 0 20vh 0 0 $brand-blue;
-	.portfolio {
-		height: 20vh;
-		background-color: $brand-blue;
-		margin-bottom: 40px;
+	background-color: $brand-blue-dark;
+	.portfolio-title {
+		font-family: $headings-font-kb;
+		padding: 20px;
+		margin-top: 0;
+		text-align: center;
 	}
 	.portfolio-display {
-		padding-top: 40px;
+		// padding-top: 40px;
 		display: inline-block;
 		height: auto;
 		// background-color: orange;
 		.thumbnail{
-			min-height: 450px;
+			.portfolio-thumnail {
+				position: relative;
+				display: inline-block;
+				width: 100%;
+				min-height: 200px;
+				// margin: 5px;
+				box-shadow: 1px 3px 5px 0px $gray;
+				background-position: left top;
+				background-size: cover;
+					.link-out {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					margin-right: 5px;
+					margin-bottom: -8px;
+					}
+					.label {
+						font-size: 2em;
+					}
+					.label-warning {
+						background-color: $brand-blue-saturated;
+					}
+			}
+			.under-portfolio {
+				margin-top: 20px;
+				h3 {
+					color: $brand-blue-dark;
+					margin-top: 0;
+				}
+				p {
+					font-size: 1.6em;
+				}
+				@media screen and (min-width: $screen-xs-min) {
+					min-height: 0em;
+					p { min-height: 10px; }
+				}
+				@media screen and (min-width: $screen-sm-min) {
+					min-height: 0em;
+					p { min-height: 132px; }
+				}
+				@media screen and (min-width: $screen-md-min) {
+					min-height: 0em;
+					p { min-height: 111px; }
+				}
+				.assets-container {
+					width: 100%;
+					position: relative;
+					text-align: center;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					.assets {
+						font-size: 1.8em;
+						margin-top: 10px;
+						.asset-label {
+							padding: 5px;
+							line-height: 30px;
+							color: $brand-blue;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -410,42 +371,21 @@ img {
 	// min-height: 500px;
 }
 
-.portfolio-thumnail {
-	position: relative;
-	display: inline-block;
-	width: 100%;
-	min-height: 200px;
-	// margin: 5px;
-	box-shadow: 1px 3px 5px 0px $gray;
-	background-position: left top;
-	background-size: cover;
-		.link-out {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		margin-right: 5px;
-		margin-bottom: -8px;
-		}
-		.label {
-			font-size: 2em;
-		}
-		.label-warning {
-			background-color: $brand-blue-saturated;
-		}
-}
 // ==================================================
 .contact-bg {
-	padding: 0;
+	padding: 3.5em 0;
 	// border-top: 200px solid $brand-yellow;
-	background-color: $brand-yellow-dark;
-	.contact {
+	background-color: $gray-dark;
+	.contact-title {
+		font-family: $headings-font-kb;
 		height: 20vh;
 		background-color: $brand-yellow-light;
 	}
 	.contact-display {
+		background-color: white;
 		// box-shadow: inset 0 20vh 0 0 $brand-yellow;
 		// padding-top: 20px;
-		min-height: 80vh;
+		// min-height: 80vh;
 		// background-color: lighten($gray-darker, 20%)
 	}
 }
@@ -485,85 +425,8 @@ img {
 
 // ==================================================
 
-.assets-container {
-	width: 100%;
-	// height: 100px;
-	position: relative;
-	text-align: center;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	// background-color: red;
-	.assets {
-		// text-align: cen;
-		font-size: 2em;
-		margin-top: 10px;
-		// display: inline;
-		.asset-label {
-			padding: 5px;
-			line-height: 30px;
-			// background-color: $brand-blue-light;
-			// display: inline-block;
-			color: $brand-blue;
-			// background-color: green;
-			// margin: 0px 5px 5px 5px
-		}
-	}
-}
-.under-portfolio {
-	// min-height: 191px;
-	@media screen and (min-width: $screen-sm-min) {
-		min-height: 191px;
-		p {
-			min-height: 115px;
-		}
-	}
-	margin-top: 20px;
-	h3 {
-		font-size: 3.4em;
-		margin-top: 0;
-	}
-	p {
-		font-size: 2.2em;
-	}
-}
-
 .typekit-badge {
 	display: none !important;
 }
 
-// ==================================================
-
-
-@font-face {
-    font-family: 'Mono Social Icons Font';
-    src: url('MonoSocialIconsFont-1.10.eot');
-    src: url('MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-         url('MonoSocialIconsFont-1.10.woff') format('woff'),
-         url('MonoSocialIconsFont-1.10.ttf') format('truetype'),
-         url('MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-    src: url('MonoSocialIconsFont-1.10.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.symbol, a.symbol:before {
-    font-family: 'Mono Social Icons Font';
-    -webkit-text-rendering: optimizeLegibility;
-    -moz-text-rendering: optimizeLegibility;
-    -ms-text-rendering: optimizeLegibility;
-    -o-text-rendering: optimizeLegibility;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-}
-
-a.symbol:before {
-    content: attr(title);
-    margin-right: 0.3em;
-    font-size: 130%;
-}
 // ==================================================
