@@ -15,9 +15,8 @@ var PortfolioView = Parse.View.extend({
 		setTimeout(function() {
 			$('.portfolio-display').append(that.el);
 			that.render();
-			if( $('.asset-label').is(':empty') ) {
-				$('.asset-label:empty').css('display','none')
-			}
+			// if( $('.asset-label').is(':empty') ) {
+			// 	$('.asset-label:empty').css('display','none')
 			scrollReveal.init();
 		}, 500);
 	},

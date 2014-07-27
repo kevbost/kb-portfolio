@@ -103,21 +103,15 @@
 								<a href="https://twitter.com/kevinbost">
 									<i class="fa fa-twitter-square"></i>
 								</a>
-							</span>
 
-							<span class="top-link-out-span">
 								<a href="http://instagram.com/kevbost">
 									<i class="fa fa-instagram"></i>
 								</a>
-							</span>
 
-							<span class="top-link-out-span">
 								<a href="http://www.linkedin.com/in/kevinbost">
 									<i class="fa fa-linkedin-square"></i>
 								</a>
-							</span>
 
-							<span class="top-link-out-span">
 								<a href="https://github.com/kevbost">
 									<i class="fa fa-github-square"></i>
 								</a>
@@ -125,7 +119,7 @@
 
 						</div>
 						<div class="top-contact">
-							<span>kevbost@gmail.com</span>
+							<span class="email">kevbost@gmail.com</span>
 						</div>
 					</div>
 				<!-- </div> -->
@@ -134,8 +128,20 @@
 	</div>
 
 	<div data-scroll-reveal data-scroll-index="1" class="container-fluid about-bg">
-		<h1 class="about-title title">about</h1>
-		<div class="about-display"></div>
+		<div class="container">
+			<h1 class="about-title title">about</h1>
+		</div>
+		<div class="about-display">
+			<div class="about-banner" data-scroll-reveal>
+				<div class="container about-copy">
+					<h2>Hello!</h2>
+					<p>I'm Kevin Bost | <b>front end web developer for hire</b> | artist | organic gardener | from Greenville, SC.</p>
+					<p>My passion in life is to push forward
+					in which ever direction needs expansion.</p>
+					<p>I'm a recent graduate of <a href="http://theironyard.com/locations/greenville/" target="_blank">The Iron Yard's</a> Front End Engineering Academy.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div data-scroll-reveal data-scroll-index="2" class="container-fluid portfolio-bg">
@@ -180,63 +186,66 @@
 
 
 	<script type="text/template" class="portfolio-template">
-			<div class="col-sm-6 col-md-6">
-				<div data-scroll-reveal='reset' class="thumbnail">
-					<div class="img portfolio-thumnail <%= thumbnail %>">
-						<div class="link-out">
-							<a href="<%= ghpages %>" target="_blank">
-								<span class="label label-warning">Demo</span>
-							</a>
-							<a href="<%= source %>" target="_blank">	
-								<span class="label label-warning">View On Github</span>
-							</a>
-						</div>
-					</div>
-					<div class="caption under-portfolio">
-						<h3><%= name %></h3>
-						<p><%= copy %></p>
-						<div class="assets-container">
-							<div class="assets">
-								<span class="asset-label"><%=asset1%></span>
-								<span class="asset-label"><%=asset2%></span>
-
-								<span class="asset-label"><%=asset3%></span>
-								<span class="asset-label"><%=asset4%></span>
-
-								<span class="asset-label"><%=asset5%></span>
-								<span class="asset-label"><%=asset6%></span>
-							</div>
-						</div>
+		<div class="col-sm-6 col-md-6">
+			<h3><%= name %></h3>
+			<div data-scroll-reveal='reset' class="thumbnail">
+				<div class="img portfolio-thumnail <%= thumbnail %>">
+					<div class="link-out">
+						<a href="<%= ghpages %>" target="_blank">
+							<span class="label label-warning">Demo</span>
+						</a>
+						<a href="<%= source %>" target="_blank">	
+							<span class="label label-warning">View On Github</span>
+						</a>
 					</div>
 				</div>
+				<div class="caption under-portfolio">
+					<p><%= copy %></p>
+					<h4>Assets:</h4>
+						<span class="asset-label"><%=asset1%>&nbsp;&nbsp;</span>
+						<span class="asset-label"><%=asset2%>&nbsp;&nbsp;</span>
+
+						<span class="asset-label"><%=asset3%>&nbsp;&nbsp;</span>
+						<span class="asset-label"><%=asset4%>&nbsp;&nbsp;</span>
+
+						<span class="asset-label"><%=asset5%>&nbsp;&nbsp;</span>
+						<span class="asset-label"><%=asset6%>&nbsp;&nbsp;</span>
+				</div>
 			</div>
+		</div>
 	</script>
 
 	<script type="text/template" class="portfolio-template-BACKUP">
-		<div class="jumbotron">
-			<h2><%= name %></h2>
-			<div class="portfolio-thumnail <%= thumbnail %>">
-				<div class="link-out">
-					<a href="<%= ghpages %>" target="_blank">
-						<span class="label label-warning">Demo</span>
-					</a>
-					<a href="<%= source %>" target="_blank">	
-						<span class="label label-warning">View On Github</span>
-					</a>
+		<div class="col-sm-6 col-md-6">
+			<div data-scroll-reveal='reset' class="thumbnail">
+				<div class="img portfolio-thumnail <%= thumbnail %>">
+					<div class="link-out">
+						<a href="<%= ghpages %>" target="_blank">
+							<span class="label label-warning">Demo</span>
+						</a>
+						<a href="<%= source %>" target="_blank">	
+							<span class="label label-warning">View On Github</span>
+						</a>
+					</div>
+				</div>
+				<div class="caption under-portfolio">
+					<h3><%= name %></h3>
+					<p><%= copy %></p>
+					<div class="assets-container">
+						<div class="assets">
+							<span class="asset-label"><%=asset1%></span>
+							<span class="asset-label"><%=asset2%></span>
+
+							<span class="asset-label"><%=asset3%></span>
+							<span class="asset-label"><%=asset4%></span>
+
+							<span class="asset-label"><%=asset5%></span>
+							<span class="asset-label"><%=asset6%></span>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="under-portfolio">
-				<p><%= copy %></p>
-				<div class="assets">
-					<span class="label label-primary"><%=asset1%></span>
-					<span class="label label-primary"><%=asset2%></span>
-					<span class="label label-primary"><%=asset3%></span>
-					<span class="label label-primary"><%=asset4%></span>
-					<span class="label label-primary"><%=asset5%></span>
-					<span class="label label-primary"><%=asset6%></span>
-				</div>
-			</div>
-		</div> <!-- temp -->
+		</div>
 	</script>
 	
 
@@ -272,7 +281,6 @@
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/underscore/underscore.js"></script>
 	<script src="bower_components/backbone/backbone.js"></script>
-	<script src="bower_components/paper/dist/paper-full.js"></script>
 	<script src="bower_components/FitVids/jquery.fitvids.js"></script>
 	<script src="bower_components/scrollReveal.js/scrollReveal.js"></script>
 	<script src="bower_components/ScrollIt/scrollIt.js"></script>

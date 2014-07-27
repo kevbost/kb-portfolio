@@ -9,7 +9,6 @@ var app = new AppRouter();
 
 Parse.history.start();
 // Backbone.history.start();
-	paper.install(window);
 
 window.onload = function() {
 	// paper.setup('myCanvas');
@@ -19,7 +18,7 @@ window.onload = function() {
 		after: '0s',
 		enter: 'bottom',
 		move: '0px',
-		over: '0.5s',
+		over: '0.3s',
 		easing: 'ease-in-out',
 		reset: true,
 		init: false,
@@ -27,15 +26,14 @@ window.onload = function() {
 	};
 	window.scrollReveal = new scrollReveal( config );
 	$.scrollIt({
-		upKey: 38,             // key code to navigate to the next section
-		downKey: 40,           // key code to navigate to the previous section
-		easing: 'linear',      // the easing function for animation
-		scrollTime: 600,       // how long (in ms) the animation takes
-		activeClass: 'active', // class given to the active nav element
-		onPageChange: null,    // function(pageIndex) that is called when page is changed
-		topOffset: 0         // offste (in px) for fixed top navigation
+		upKey: 38,				// key code to navigate to the next section
+		downKey: 40,			// key code to navigate to the previous section
+		easing: 'linear',		// the easing function for animation
+		scrollTime: 600,		// how long (in ms) the animation takes
+		activeClass: 'active',	// class given to the active nav element
+		onPageChange: null,		// function(pageIndex) that is called when page is changed
+		topOffset: 0			// offste (in px) for fixed top navigation
 	})
-
 };
 
 
