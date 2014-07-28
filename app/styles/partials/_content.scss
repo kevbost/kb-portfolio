@@ -486,13 +486,6 @@ img {
 				}
 			}
 		}
-		
-		&::before {
-			content: "";
-		}
-		&::after {
-			content: "";
-		}
 		.otherwise {
 			text-align: right;
 		}
