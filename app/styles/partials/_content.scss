@@ -307,13 +307,13 @@ img {
 	.about-title {
 		font-family: $headings-font-kb;
 		font-weight: $headings-font-weight;
+		font-size: 55px !important;
 		padding: 20px;
-		margin-top: 0;
-		font-size: 20em;
+		// margin-top: 0;
 		text-align: left;
 	}
 	.about-display {
-		padding-top: 25px;
+		// padding-top: 25px;
 		// min-height: 100vh;
 		.about-banner {
 			// width: 50em;
@@ -344,13 +344,10 @@ img {
 						}
 					}
 				}
-				// p:nth-child(4) {  
-				// 	border-bottom: 2px solid $gray-lighter;
-				// 	padding: 10px 0;
-				// }
 				ul {
 					font-size: 1.5em;
 					margin-bottom: 15px;
+					.insert {font-size: 12px;margin-bottom: 0px;}
 				}
 			}
 		}
@@ -363,6 +360,7 @@ img {
 	.portfolio-title {
 		font-family: $headings-font-kb;
 		font-weight: $headings-font-weight;
+		font-size: 55px !important;
 		padding: 20px;
 		margin-top: 0;
 		text-align: left;
@@ -431,11 +429,12 @@ img {
 				}
 				@media screen and (min-width: $screen-sm-min) {
 					min-height: 0em;
-					p { min-height: 154px; }
+					p { min-height: 176px; }
 				}
 				@media screen and (min-width: $screen-md-min) {
-					min-height: 0em;
-					p { min-height: 111px; }
+					min-height: 22em;
+					p { min-height: 132px; }
+
 				}
 				.asset-label {
 					font-size: 1.4em;
@@ -538,6 +537,10 @@ img {
 	background-image: url("../images/chat-app.png");
 }
 
+.github-repo-thumbnail {
+	background-image: url("../images/github-repo.png");
+}
+
 // ==================================================
 
 .typekit-badge {
@@ -545,3 +548,4 @@ img {
 }
 
 // ==================================================
+

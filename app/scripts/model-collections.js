@@ -29,7 +29,6 @@ var Portfolio = Parse.Object.extend({
 
 var PortfolioCollection = Parse.Collection.extend({
   model: Portfolio
-  // comparator: function( Photo ) { return Photo.get('_id')}
 });
 
 // var AssetsCollection = Parse.Collection.extend({
