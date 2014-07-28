@@ -40,9 +40,7 @@
 			<!-- <li class="portfolio navlink"><a href="#">PORTFOLIO</a></li> -->
  			<li data-scroll-nav="1" class="about-link navlink"><a href="#about">about</a></li>
 			<li data-scroll-nav="2" class="portfolio-link navlink"><a href="#portfolio">portfolio</a></li>
-			<li data-scroll-nav="3" class="contact-link navlink"><a href="#contact">contact</a></li>
 			</ul>
-
 			<ul class="nav navbar-nav navbar-right">
 			<li><a href="https://github.com/kevbost/" target="_blank"><b>Find Me On Github</b></a></li>
 			</ul>
@@ -64,7 +62,6 @@
 				<li data-scroll-nav="0" class="top-link navlink"><a href="#top">top</a></li>
 				<li data-scroll-nav="1" class="about-link navlink"><a href="#about">about</a></li>
 				<li data-scroll-nav="2" class="portfolio-link navlink"><a href="#portfolio">portfolio</a></li>
-				<li data-scroll-nav="3" class="contact-link navlink"><a href="#contact">contact</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -163,7 +160,6 @@
 	</div>
 
 	<div data-scroll-reveal data-scroll-index="3" class="container-fluid contact-bg">
-		<!-- <h1 class="contact-title title">contact</h1> -->
 		<div class="container contact-display">
 			<div class="row">
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 otherwise">
@@ -188,22 +184,6 @@
 		</div>
 	</div>
 <!-- /main -->
-
-<!-- paper js canvas -->
-	<!-- <div id="background-canvas" style="position:fixed; top:0; left:0; bottom:0; z-index:-1">
-		<canvas id="myCanvas" resize></canvas>
-		<script type="text/paperscript" canvas="myCanvas">
-		</script>
-	</div> 
-
-	<div class="myCanvas-container">
-		<canvas id="myCanvas" height="150" width="500"></canvas>
-		<script type="text/paperscript" canvas="myCanvas">
-		</script>
-	</div> -->
-
-<!-- /paper js canvas -->
-
 
 	<script type="text/template" class="portfolio-template">
 		<div class="col-sm-6 col-md-6">
@@ -233,67 +213,6 @@
 				</div>
 			</div>
 		</div>
-	</script>
-
-	<script type="text/template" class="portfolio-template-BACKUP">
-		<div class="col-sm-6 col-md-6">
-			<div data-scroll-reveal='reset' class="thumbnail">
-				<div class="img portfolio-thumnail <%= thumbnail %>">
-					<div class="link-out">
-						<a href="<%= ghpages %>" target="_blank">
-							<span class="label label-warning">Demo</span>
-						</a>
-						<a href="<%= source %>" target="_blank">	
-							<span class="label label-warning">View On Github</span>
-						</a>
-					</div>
-				</div>
-				<div class="caption under-portfolio">
-					<h3><%= name %></h3>
-					<p><%= copy %></p>
-					<div class="assets-container">
-						<div class="assets">
-							<span class="asset-label"><%=asset1%></span>
-							<span class="asset-label"><%=asset2%></span>
-
-							<span class="asset-label"><%=asset3%></span>
-							<span class="asset-label"><%=asset4%></span>
-
-							<span class="asset-label"><%=asset5%></span>
-							<span class="asset-label"><%=asset6%></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</script>
-	
-
-	<script type="text/template" class="about-template">
-		
-		<h2>about</h2>
-		<div class="jumbotron">
-			<p>about</p>
-		</div>
-	
-	</script>
-
-	<script type="text/template" class="contact-template">
-		
-		<h2>contact</h2>
-		<div class="jumbotron">
-			<p>contact</p>
-		</div>
-
-	</script>
-
-	<script type="text/template" class="photography-template">
-		
-		<h2>photography</h2>
-		<div class="jumbotron">
-			<p>photography</p>
-		</div>
-
 	</script>
 
 	<!-- build:js(.) scripts/vendor.js -->
