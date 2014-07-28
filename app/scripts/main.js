@@ -34,6 +34,11 @@ window.onload = function() {
 		onPageChange: null,		// function(pageIndex) that is called when page is changed
 		topOffset: 0			// offste (in px) for fixed top navigation
 	})
+
+	setInterval(function(){
+        $('.time').html(moment().format('hh:mm:ss A'));
+	}, 1000)
+        $('.year').append(moment().format('YYYY') + ' Kevin Bost');
 };
 
 

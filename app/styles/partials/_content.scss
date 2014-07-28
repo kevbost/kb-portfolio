@@ -329,8 +329,9 @@ img {
 				p {
 					// width: 90%;
 					// margin-top: 1.5em;
-					// margin-bottom: 1.5em;
+					margin: 0 0 15px;
 					font-size: 2em;
+
 					b {
 						// font-style: ital ic;
 						font-weight: 600;
@@ -343,8 +344,12 @@ img {
 						}
 					}
 				}
+				// p:nth-child(4) {  
+				// 	border-bottom: 2px solid $gray-lighter;
+				// 	padding: 10px 0;
+				// }
 				ul {
-					font-size: 1.3em;
+					font-size: 1.5em;
 				}
 			}
 		}
@@ -462,17 +467,47 @@ img {
 		background-color: $brand-yellow-light;
 	}
 	.contact-display {
-		background-color: white;
+		// background-color: white;
+		h3 {
+			font-family: $headings-font-kb;
+			font-weight: $headings-font-weight;
+			color: $brand-blue-light;
+		}
+		ul {
+			list-style-type: none;
+			padding-left: 0px;
+			margin-bottom: 20px;
+			color: $brand-blue;
+			font-weight: 500;
+			a {
+				font-size: 14px;
+				&:hover {
+					color: $brand-blue-light;
+				}
+			}
+		}
+		
 		&::before {
-			content: "hello";
+			content: "";
 		}
 		&::after {
-			content: "hello";
+			content: "";
 		}
-		// box-shadow: inset 0 20vh 0 0 $brand-yellow;
-		// padding-top: 20px;
-		// min-height: 80vh;
-		// background-color: lighten($gray-darker, 20%)
+		.otherwise {
+			text-align: right;
+		}
+		.the-scoop {
+			text-align: left;
+		}
+		.at-sign {
+			font-weight: 300;
+		}
+		@media screen and (max-width: $screen-xs-min) {
+			h3 {
+				font-size: ceil(($font-size-base * 1.8));
+
+			}
+		}
 	}
 }
 // ==================================================
