@@ -35,7 +35,7 @@ img {
 	border-radius: 0;
 	z-index: 4;
 	.navbar-nav {
-		font-size: 1.4em;
+		font-size: 14px;
 		color: $brand-blue-lighter;
 		&:hover {
 			color: $brand-blue-lighter;
@@ -176,13 +176,14 @@ img {
 	margin-top: -30px;
 	position: relative;
 	z-index: 1;
-	background: url('../images/cyan-left.jpg') no-repeat left 0px top,
-				url('../images/cyan-right.jpg') no-repeat right 0px top,
-				url('../images/cyan-repeat.jpg') repeat-x;
-				// background-attachment: fixed;
-				background-size:	contain,
-									contain,
-									contain;
+	background-color: $brand-blue;
+	// background: url('../images/cyan-left.jpg') no-repeat left 0px top,
+	// 			url('../images/cyan-right.jpg') no-repeat right 0px top,
+	// 			url('../images/cyan-repeat.jpg') repeat-x;
+	// 			// background-attachment: fixed;
+	// 			background-size:	contain,
+	// 								contain,
+	// 								contain;
 	.top {
 		.top-display {
 			// min-height: 100vh;
@@ -197,6 +198,9 @@ img {
 					line-height: 0.7em;
 					text-align: center;
 					text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1);
+						@media screen and (max-width: 206px) {
+							line-height: 1;
+						}
 
 						// // // Deep light shadow
 						// letter-spacing: -.15em;
@@ -245,6 +249,9 @@ img {
 					text-align: center;
 					line-height: 2em;
 					color: $brand-blue-darker;
+						@media screen and (max-width: 206px) {
+							line-height: 1;
+						}
 				}
 				.top-link-out {
 					text-align: center;
@@ -261,7 +268,7 @@ img {
 							@include transition(0.2s);
 							&:hover {
 								transform: scale(1.2) translateY(-5px);
-								color: $brand-blue-dark;
+								color: darken($brand-blue-darker, 10%);
 							}
 						}
 					}
@@ -269,7 +276,7 @@ img {
 				.top-contact {
 					font-family: $headings-font-kb;
 					text-align: center;
-					font-size: 2em;
+					font-size: 20px;
 					margin-top: 1em;
 					color: $brand-blue-darker;
 					.email {
@@ -309,6 +316,7 @@ img {
 		font-weight: $headings-font-weight;
 		font-size: 55px !important;
 		padding: 20px;
+		padding-left: 0px;
 		// margin-top: 0;
 		text-align: left;
 	}
@@ -330,7 +338,7 @@ img {
 					// width: 90%;
 					// margin-top: 1.5em;
 					margin: 0 0 15px;
-					font-size: 2em;
+					font-size: 20px;
 
 					b {
 						// font-style: ital ic;
@@ -345,12 +353,17 @@ img {
 					}
 				}
 				ul {
-					font-size: 1.5em;
+					font-size: 18px;
 					margin-bottom: 15px;
-					.insert {font-size: 12px;margin-bottom: 0px;}
+					.insert {font-size: 15px;margin-bottom: 0px;}
 				}
 			}
 		}
+	}
+}
+.title {
+	@media screen and (max-width: $screen-sm) {
+		padding-left: 20px;
 	}
 }
 // ==================================================
@@ -378,7 +391,7 @@ img {
 		}
 		.thumbnail{
 			text-align: center;
-			margin-bottom: 5em;
+			margin-bottom: 50px;
 			.portfolio-thumnail {
 				position: relative;
 				display: inline-block;
@@ -400,7 +413,7 @@ img {
 				margin-bottom: -8px;
 				}
 				.label {
-					font-size: 1.5em;
+					font-size: 15px;
 					font-weight: 600;
 				}
 				.label-warning {
@@ -421,7 +434,7 @@ img {
 					margin-bottom: 0;
 				}
 				p {
-					font-size: 1.6em;
+					font-size: 16px;
 				}
 				@media screen and (min-width: $screen-xs-min) {
 					min-height: 0em;
@@ -434,7 +447,6 @@ img {
 				@media screen and (min-width: $screen-md-min) {
 					min-height: 22em;
 					p { min-height: 132px; }
-
 				}
 				.asset-label {
 					font-size: 1.4em;
