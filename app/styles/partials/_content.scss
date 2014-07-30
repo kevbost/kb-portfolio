@@ -177,13 +177,13 @@ img {
 	position: relative;
 	z-index: 1;
 	background-color: $brand-blue;
-	// background: url('../images/cyan-left.jpg') no-repeat left 0px top,
-	// 			url('../images/cyan-right.jpg') no-repeat right 0px top,
-	// 			url('../images/cyan-repeat.jpg') repeat-x;
-	// 			// background-attachment: fixed;
-	// 			background-size:	contain,
-	// 								contain,
-	// 								contain;
+	background: url('../images/cyan-left.jpg') no-repeat left 0px top,
+				url('../images/cyan-right.jpg') no-repeat right 0px top,
+				url('../images/cyan-repeat.jpg') repeat-x;
+				// background-attachment: fixed;
+				background-size:	contain,
+									contain,
+									contain;
 	.top {
 		.top-display {
 			// min-height: 100vh;
