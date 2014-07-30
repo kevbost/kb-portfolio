@@ -68,5 +68,3 @@ $(window).scroll( function() {
 	$('.top-contact').fitText(3, { minFontSize: '15px', maxFontSize: '30px' });
 	$('.title').fitText(0.8, { minFontSize: '50px', maxFontSize: '100px' });
 	$('.fit-text').fitText();
-
-

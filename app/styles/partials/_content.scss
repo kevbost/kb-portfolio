@@ -469,9 +469,21 @@ img {
 		}
 		.the-scoop {
 			text-align: left;
+			font-size: 14px;
+			.built-with {
+				font-size: 1em;
+				padding-top: 2px;
+			}
+			ul {
+				.insert2 {
+					a {
+						font-size: 10px;
+					}
+				}
+			}
 		}
-		.at-sign {
-			font-weight: 300;
+		.year {
+			font-size: 1.25em;
 		}
 		@media screen and (max-width: $screen-xs-min) {
 			h3 {
