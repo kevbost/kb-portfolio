@@ -198,51 +198,10 @@ img {
 					line-height: 0.7em;
 					text-align: center;
 					text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1);
-						@media screen and (max-width: 206px) {
-							line-height: 1;
-						}
-
-						// // // Deep light shadow
-						// letter-spacing: -.15em;
-						// color: white;
-						// text-shadow: 
-						// 0px 0px 0 #FCFDFE,
-						// -1px 2px 1px #F9FCFD,
-						// -2px 4px 1px #F7FBFC,
-						// -3px 6px 1px #F4FAFC,
-						// -4px 8px 1px #F1F9FB,
-						// -5px 10px 1px #EFF7FA,
-						// -6px 12px 1px #ECF6FA,
-						// -7px 14px 1px #EAF5F9,
-						// -8px 16px 1px #E7F4F8,
-						// -9px 18px 1px #E4F3F8,
-						// -10px 20px 1px #E2F2F7,
-						// -11px 22px 1px #DFF0F6,
-						// -12px 24px 1px #DCEFF6,
-						// -13px 26px 1px #DAEEF5,
-						// -14px 28px 1px #D7EDF4,
-						// -15px 30px 1px #D5ECF3,
-						// -16px 32px 1px #D2EBF3,
-						// -17px 34px 1px #CFE9F2,
-						// -18px 36px 1px #CDE8F1,
-						// -19px 38px 1px #CAE7F1,
-						// -20px 40px 1px #C7E6F0,
-						// -21px 42px 1px #C5E5EF,
-						// -22px 44px 1px #C2E4EF,
-						// -23px 46px 1px #C0E2EE,
-						// -24px 48px 1px #BDE1ED,
-						// -25px 50px 1px #BAE0ED,
-						// -26px 52px 1px #B8DFEC,
-						// -27px 54px 1px #B5DEEB,
-						// -28px 56px 1px #B3DDEB;
-
-						// // // Inset Shadow
-						// color: $brand-blue-light;
-						// // letter-spacing: .03em;
-						// text-shadow: 
-						// -1px -1px 1px $brand-blue-lighter, 
-						// 2px 2px 1px $brand-blue;
-				} // minimize
+					@media screen and (max-width: 206px) {
+						line-height: 1;
+					}
+				}
 
 				.fit-text-title {
 					font-family: $headings-font-kb;
@@ -415,11 +374,18 @@ img {
 				.label {
 					font-size: 15px;
 					font-weight: 600;
+					color: $brand-blue-darker;
 				}
 				.label-warning {
-					background-color: $brand-blue-darker;
+					// background-color: $brand-blue-darker;
+					background-color: $gray-lighter;
+					box-shadow: 2px 4px 0px 0px black;
+					border: 2px solid black;
+					margin-left: 5px;
+					// @include transition(0.2s);
 					&:hover {
 						background-color: $brand-blue;
+						color: white;
 					}
 				}
 			}
@@ -560,4 +526,3 @@ img {
 }
 
 // ==================================================
-
