@@ -4,10 +4,7 @@ var AppRouter = Parse.Router.extend({
 
 	routes: {
 		"": "home",
-		":any": "home",
-		"about": "about",
-		"contact": "contact",
-		"photography": "photography"
+		":any": "home"
 	},
 
 	initialize: function() {
