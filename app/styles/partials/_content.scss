@@ -466,7 +466,7 @@ img {
 				.label-warning {
 					// background-color: $brand-blue-darker;
 					background-color: $gray-lighter;
-					box-shadow: 2px 4px 0px 0px black;
+					box-shadow: 1px 3px 3px -1px $brand-blue-dark;
 					border: 2px solid black;
 					margin-left: 5px;
 					// @include transition(0.2s);
