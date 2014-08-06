@@ -82,7 +82,7 @@ img {
 // ==================================================
 .under-nav-container {
 	position: relative;
-	top: -20px;
+	top: -15px;
 	margin: 0 auto;
 	z-index: 3;
 	.under-nav-toggle {
@@ -357,7 +357,7 @@ img {
 		padding-left: 0;
 	}
 	.experience-popover {
-		margin-bottom: 30px;
+		margin-bottom: 5px;
 		width: 100%;
 		@include transition(0.2s);
 	}
@@ -384,13 +384,13 @@ img {
 	position: relative;
 	height: 100px;
 	width: 100%;
-	border: 2px solid #ccc;
+	border: 2px solid $brand-blue-dark;
 	border-radius: 5px;
 	padding: 10px;
-	margin: 0 auto;
+	margin-top: 10px;
 	@include transition(0.4s);
-	box-shadow: inset 0px 0px 0px 8px white,
-				inset 0px 0px 2px 10px #ccc;
+	box-shadow: inset 0px 0px 0px 8px $brand-blue-darker,
+				inset 0px 0px 2px 10px $brand-blue-dark;
 	.pdf-link-under	{
 		position: absolute;
 		left: 0px;
@@ -625,3 +625,10 @@ img {
 }
 
 // ==================================================
+.grey-box {
+	// padding: 10px;
+	border: 1px solid #eee;
+	background-color: #eee;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
