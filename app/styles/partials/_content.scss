@@ -419,6 +419,7 @@ img {
 
 .pdf-link:hover {
 	background-color: $brand-blue-lighter;
+	border: 2px solid $brand-blue-lighter;
 	box-shadow: inset 0px 0px 0px 8px $brand-blue,
 				inset 0px 0px 0px 10px $brand-blue-lighter;
 	.pdf-link-under {
