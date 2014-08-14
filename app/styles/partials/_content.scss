@@ -93,28 +93,39 @@ img {
 		-moz-border-radius-bottomright: 3px;
 		-moz-border-radius-bottomleft: 3px;
 		margin: 0 auto;
-		height: 10px;
+		height: 20px;
 		width: 100%;
 		background-color: $brand-blue;
 		background-repeat: repeat-x;
 		cursor: pointer;
 	}
 	.under-toggle {
-		height: 150px;
+		// height: 150px;
 		display: none;
 		position: relative;
 		top: -5px;
 		z-index: -2;
 		margin-bottom: 40px;
 		.under-nav {
-			height: 150px;
-			max-width: 500px;
+			// min-height: 150px;
+			// max-width: 500px;
+			width: 98%;
 			margin-left: 10px;
 			// background-color: lighten($brand-two, 30%);
 			background-color: darken($brand-blue-lighter, 0%);
 			margin: 0 auto;
 			margin-bottom: 20px;
 			// padding-top: -20px;
+			.under-nav-content {
+				padding: 10px;
+				h2 {
+					color: $brand-blue-dark;
+					font-weight: 500;
+				}
+				ul {
+					font-size: 16px;
+				}
+			}
 		}
 	}
 }
@@ -194,6 +205,7 @@ img {
 				.fit-text-name {
 					font-family: $headings-font-kb;
 					font-style: normal;
+					font-size: 100px;
 					font-weight: 800;
 					line-height: 0.7em;
 					text-align: center;
@@ -394,20 +406,20 @@ img {
 	.pdf-link-under	{
 		position: absolute;
 		left: 0px;
-		bottom: 38px;
+		bottom: 44px;
 		height: 20px;
 		width: 100%;
 		text-align: center;
-		font-size: 18px;
+		font-size: 24px;
 		color: $gray-light;
-		@include transition(0.4s);
+		@include transition(0.2s);
 		// padding-bottom: 10px;
 	}
 }
 
 .pdf-link:hover {
 	background-color: $brand-blue-lighter;
-	box-shadow: inset 0px 0px 0px 8px $brand-blue-darker,
+	box-shadow: inset 0px 0px 0px 8px $brand-blue,
 				inset 0px 0px 0px 10px $brand-blue-lighter;
 	.pdf-link-under {
 		color: $brand-blue;

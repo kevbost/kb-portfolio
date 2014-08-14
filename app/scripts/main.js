@@ -68,7 +68,12 @@ $(window).scroll( function() {
 	$('.top-contact').fitText(3, { minFontSize: '15px', maxFontSize: '30px' });
 	$('.title').fitText(0.8, { minFontSize: '50px', maxFontSize: '100px' });
 	$('.fit-text').fitText();
+	// $('.pdf-link-under').fitText(1, { minFontSize: '16px', maxFontSize: '100px' });
 
 $('.experience-popover').popover({
   trigger: 'focus'
+})
+
+$('.easteregg-popover').popover({
+  trigger: 'hover focus'
 })
